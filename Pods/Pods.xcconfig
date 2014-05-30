@@ -1,0 +1,6 @@
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers" "${PODS_ROOT}/Headers/AFNetworking" "${PODS_ROOT}/Headers/BaiduMaps-iOS-SDK" "${PODS_ROOT}/Headers/BaiduPushSDK" "${PODS_ROOT}/Headers/MBProgressHUD" "${PODS_ROOT}/Headers/Qiniu"
+LIBRARY_SEARCH_PATHS = $(PODS_ROOT)/BaiduMaps-iOS-SDK "$(PODS_ROOT)/BaiduPushSDK/**"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers" -isystem "${PODS_ROOT}/Headers/AFNetworking" -isystem "${PODS_ROOT}/Headers/BaiduMaps-iOS-SDK" -isystem "${PODS_ROOT}/Headers/BaiduPushSDK" -isystem "${PODS_ROOT}/Headers/MBProgressHUD" -isystem "${PODS_ROOT}/Headers/Qiniu"
+OTHER_LDFLAGS = -ObjC -lBPush -lz -framework CFNetwork -framework CoreGraphics -framework CoreLocation -framework CoreTelephony -framework MobileCoreServices -framework OpenGLES -framework QuartzCore -framework Security -framework SystemConfiguration
+PODS_ROOT = ${SRCROOT}/Pods

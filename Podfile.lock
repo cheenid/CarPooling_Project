@@ -1,0 +1,40 @@
+PODS:
+  - AFNetworking (2.2.4):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+    - AFNetworking/UIKit
+  - AFNetworking/NSURLConnection (2.2.4):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.2.4):
+    - AFNetworking/NSURLConnection
+  - AFNetworking/Reachability (2.2.4)
+  - AFNetworking/Security (2.2.4)
+  - AFNetworking/Serialization (2.2.4)
+  - AFNetworking/UIKit (2.2.4):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+  - BaiduMaps-iOS-SDK (2.2.1)
+  - BaiduPushSDK (1.1.0)
+  - MBProgressHUD (0.8)
+  - Qiniu (6.2.2)
+
+DEPENDENCIES:
+  - AFNetworking (~> 2.2.4)
+  - BaiduMaps-iOS-SDK (~> 2.2.1)
+  - BaiduPushSDK (~> 1.1.0)
+  - MBProgressHUD (~> 0.8)
+  - Qiniu (~> 6.2.2)
+
+SPEC CHECKSUMS:
+  AFNetworking: ab63e259fe91eef4519b371ef0a4955af0e73e64
+  BaiduMaps-iOS-SDK: 87f8d346bfbf3624e4b448f0504449f84194dd7d
+  BaiduPushSDK: 90f4838d12a5b3c860e8325a939880352504f549
+  MBProgressHUD: c356980b0cd097f19acec959b49dca5eb8ec31be
+  Qiniu: 0f68a36396af5fc3fec5c0ea0e15e138a67a8bc3
+
+COCOAPODS: 0.33.1

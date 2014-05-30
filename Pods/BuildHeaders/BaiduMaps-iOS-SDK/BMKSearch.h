@@ -1,0 +1,1 @@
+../../BaiduMaps-iOS-SDK/Classes/BMKSearch.h

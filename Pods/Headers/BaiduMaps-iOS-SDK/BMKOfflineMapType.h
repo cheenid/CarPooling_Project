@@ -1,0 +1,1 @@
+../../BaiduMaps-iOS-SDK/Classes/BMKOfflineMapType.h

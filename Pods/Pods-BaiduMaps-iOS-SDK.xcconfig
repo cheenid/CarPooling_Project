@@ -1,0 +1,2 @@
+PODS_BAIDUMAPS_IOS_SDK_LIBRARY_SEARCH_PATHS = $(PODS_ROOT)/BaiduMaps-iOS-SDK
+PODS_BAIDUMAPS_IOS_SDK_OTHER_LDFLAGS = -framework CoreGraphics -framework CoreLocation -framework OpenGLES -framework QuartzCore -framework Security -framework SystemConfiguration
