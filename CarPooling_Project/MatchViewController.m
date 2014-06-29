@@ -8,6 +8,7 @@
 
 #import "MatchViewController.h"
 #import "ProfileViewController.h"
+#import "SwitchRouteViewController.h"
 
 @interface MatchViewController ()
 
@@ -38,7 +39,7 @@
     self.view = contentView;
 }
 
-- (void)initBarButtonItem
+- (void)initleftBarButtonItem
 {
     UIImage *leftBtnImage = [UIImage imageNamed:@"btn_profile_image"];
     
@@ -52,11 +53,37 @@
     self.navigationItem.leftBarButtonItem = leftBarItem;
 }
 
+- (void)initBarButtonItem
+{
+    UIButton *leftButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [leftButton setFrame:CGRectMake(0, 0, 80, 34)];
+    [leftButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [leftButton setTitleColor:[UIColor whiteColor] forState:UIControlStateHighlighted];
+    [leftButton setTitle:@"个人资料" forState:UIControlStateNormal];
+    [leftButton setTitle:@"个人资料" forState:UIControlStateHighlighted];
+    [leftButton addTarget:self action:@selector(leftBarBtnClick) forControlEvents:UIControlEventTouchUpInside];
+    
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:leftButton];
+    
+    UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [rightButton setFrame:CGRectMake(0, 0, 80, 34)];
+    [rightButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [rightButton setTitleColor:[UIColor whiteColor] forState:UIControlStateHighlighted];
+    [rightButton setTitle:@"切换路线" forState:UIControlStateNormal];
+    [rightButton setTitle:@"切换路线" forState:UIControlStateHighlighted];
+    [rightButton addTarget:self action:@selector(clickToSwitchRoute) forControlEvents:UIControlEventTouchUpInside];
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:rightButton];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     [self initBarButtonItem];
 }
+
+#pragma mark -
+#pragma mark UIButton Action
 
 - (void)leftBarBtnClick
 {
@@ -66,6 +93,11 @@
     profileVC = nil;
 }
 
-
+- (void)clickToSwitchRoute
+{
+    SwitchRouteViewController *switchRouteVC = [[SwitchRouteViewController alloc]init];
+    [self.navigationController pushViewController:switchRouteVC animated:YES];
+    switchRouteVC = nil;
+}
 
 @end

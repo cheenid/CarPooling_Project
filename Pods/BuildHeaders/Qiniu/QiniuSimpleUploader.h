@@ -1,1 +1,0 @@
-../../Qiniu/QiniuSDK/QiniuSimpleUploader.h

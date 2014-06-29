@@ -7,12 +7,19 @@
 //
 
 #import "ExchangeViewController.h"
+#import "CPHttpRequest.h"
 
 @interface ExchangeViewController ()
 
 @end
 
 @implementation ExchangeViewController
+#pragma mark -
+#pragma mark
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -24,6 +31,9 @@
     return self;
 }
 
+#pragma mark -
+#pragma mark loadView
+
 - (void)loadView
 {
     [super loadView];
@@ -32,27 +42,18 @@
     self.view = contentView;
 }
 
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [[CPHttpRequest sharedInstance]requestGiftList:1 size:100 success:^(id responseObject) {
+        
+    } failture:^(NSError *error) {
+        
+    }];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

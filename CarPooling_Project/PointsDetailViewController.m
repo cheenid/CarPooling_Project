@@ -39,7 +39,8 @@
 
 - (void)queryDetailScore
 {
-    [[CPHttpRequest sharedInstance]requestScoreList:1 size:20
+    [[CPHttpRequest sharedInstance]requestScoreList:1
+                                               size:1000
                                             success:^(id responseObject) {
         
     } failture:^(NSError *error) {

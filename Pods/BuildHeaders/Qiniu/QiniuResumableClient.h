@@ -1,1 +1,0 @@
-../../Qiniu/QiniuSDK/QiniuResumableClient.h

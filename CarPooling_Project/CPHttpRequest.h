@@ -311,6 +311,16 @@
 
 
 
+#pragma mark -请求七牛上传token
+/**
+ * @method
+ * @brief GET 请求获取七牛上传token
+ * @see {@url} /api/qiniu/uptoken
+ * @return
+ */
+- (void)requestQiniuToken:(void(^)(id responseObject))success
+                 failture:(void(^)(NSError *error))failture;
+
 #pragma mark - 馈赠积分接口
 /*!
  * @method

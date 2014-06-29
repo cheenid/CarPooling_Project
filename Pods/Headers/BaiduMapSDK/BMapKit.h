@@ -1,0 +1,1 @@
+../../BaiduMapSDK/Classes/inc/BMapKit.h

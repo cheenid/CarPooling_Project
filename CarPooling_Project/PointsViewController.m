@@ -10,7 +10,7 @@
 #import "PointsDetailViewController.h"
 #import "ExchangeViewController.h"
 #import "PresentViewController.h"
-
+#import "BuyPointsViewController.h"
 #import "CPHttpRequest.h"
 
 @interface PointsViewController ()<UITableViewDataSource,UITableViewDelegate>
@@ -77,17 +77,30 @@
         {
             _myPoints = [responseObject[@"score"]integerValue];
             [self.tableView reloadData];
+            NSInteger  statusCode = [responseObject[@"statusCode"]integerValue];
+            if (statusCode == 1)
+            {
+                NSString *accountID = [[YZKeyChainManager defaultManager]keychainValueForKey:KMobileNO];
+                NSDictionary *params = @{@"score":responseObject[@"score"],@"accountID":accountID};
+                [[YZDataBaseMgr sharedManager]insertOrUpdateTotalScore:params];
+            }
         }
+        
     } failture:^(NSError *error) {
         
     }];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    [self getMyTotalPoints];
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     [self.view addSubview:self.tableView];
-    [self getMyTotalPoints];
 }
 
 
@@ -143,19 +156,21 @@
     }
     else if (indexPath.row == 1)
     {
-        
+        BuyPointsViewController *buyPointVC = [[BuyPointsViewController alloc]init];
+        [self.navigationController pushViewController:buyPointVC animated:YES];
+        buyPointVC = nil;
     }
     else if (indexPath.row == 2)
-    {
-        ExchangeViewController *exchangeVC = [[ExchangeViewController alloc]init];
-        [self.navigationController pushViewController:exchangeVC animated:YES];
-        exchangeVC = nil;
-    }
-    else
     {
         PresentViewController *presentVC = [[PresentViewController alloc]init];
         [self.navigationController pushViewController:presentVC animated:YES];
         presentVC = nil;
+    }
+    else
+    {
+        ExchangeViewController *exchangeVC = [[ExchangeViewController alloc]init];
+        [self.navigationController pushViewController:exchangeVC animated:YES];
+        exchangeVC = nil;
     }
 }
 

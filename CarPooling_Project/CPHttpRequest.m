@@ -7,6 +7,7 @@
 //
 
 #import "CPHttpRequest.h"
+#import <JSONKit.h>
 
 @implementation CPHttpRequest
 + (instancetype)sharedInstance
@@ -194,7 +195,7 @@
 #pragma mark -上传我的个人信息接口
 /**
  * @method
- * @brief POST 上传我的个人信息，图片之类的，客户端调用七牛的接口上传
+ * @brief POST 上传我的个人信息，图片之类的，客户端调用七牛的接口上传 (Ok)
  * @see {@url} /api/profile/person/upload
  * @param  realname 姓名
  * @param  nickname  昵称
@@ -213,7 +214,27 @@
                     success:(void(^)(id responseObject))success
                    failture:(void(^)(NSError *error))failture
 {
-    
+    NSNumber *genderNumber = [NSNumber numberWithInteger:gender];
+    NSDictionary *parameters = @{@"realname":realname,@"nickname":nickname,@"gender":genderNumber
+                                 ,@"birthday":birthday,@"headPhoto":headPhoto,@"qq":qq};
+    NSData *httpBody = [parameters JSONData];
+    NSURL *url = [NSURL URLWithString:@"http://www.egoal.cn/sharecar/api/profile/person/upload"];
+    NSMutableURLRequest *urlRequest = [[NSMutableURLRequest alloc]initWithURL:url];
+    [urlRequest setValue:@"text/html" forHTTPHeaderField:@"Content-Type"];
+    [urlRequest setHTTPMethod:@"POST"];
+    [urlRequest setHTTPBody:httpBody];
+
+    AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:urlRequest];
+    operation.responseSerializer = [AFJSONResponseSerializer serializer];
+    [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject)
+     {
+        DEBUG_METHOD(@"JSON: %@", responseObject);
+         success(responseObject);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        DEBUG_METHOD(@"Error: %@", error);
+        failture(error);
+    }];
+    [operation start];
 }
 
 
@@ -459,6 +480,8 @@
                        failture:(void(^)(NSError *error))failture
 {
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.responseSerializer = [AFJSONResponseSerializer serializer];
+    manager.requestSerializer=[AFJSONRequestSerializer serializer];
     NSDictionary *parameters = @{@"carType": carType,@"carColors":carColors,@"carNumber":carNumber,@"carSeats":carSeats};
     [manager POST:@"http://www.egoal.cn/sharecar/api/profile/car/upload" parameters:parameters
           success:^(AFHTTPRequestOperation *operation, id responseObject) {
@@ -485,6 +508,8 @@
                              failture:(void(^)(NSError *error))failture
 {
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.responseSerializer = [AFJSONResponseSerializer serializer];
+    manager.requestSerializer=[AFJSONRequestSerializer serializer];
     NSDictionary *parameters = @{@"photo": photo};
     [manager POST:@"http://www.egoal.cn/sharecar/api/profile/carlicense/verify" parameters:parameters
           success:^(AFHTTPRequestOperation *operation, id responseObject) {
@@ -584,6 +609,29 @@
           }];
 }
 
+#pragma mark -请求七牛上传token
+/**
+ * @method
+ * @brief GET 请求获取七牛上传token
+ * @see {@url} /api/qiniu/uptoken
+ * @return
+ */
+- (void)requestQiniuToken:(void(^)(id responseObject))success
+                 failture:(void(^)(NSError *error))failture
+{
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.responseSerializer = [AFJSONResponseSerializer serializer];
+    manager.requestSerializer=[AFJSONRequestSerializer serializer];
+    [manager GET:@"http://www.egoal.cn/sharecar/api/qiniu/uptoken" parameters:nil
+          success:^(AFHTTPRequestOperation *operation, id responseObject) {
+              DEBUG_METHOD(@"JSON: %@", responseObject);
+              success(responseObject);
+              
+          } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+              DEBUG_METHOD(@"Error: %@", error);
+              failture(error);
+          }];
+}
 
 #pragma mark - 馈赠积分接口
 /*!

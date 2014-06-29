@@ -15,6 +15,7 @@
 #import "LoginViewController.h"
 #import "CPHttpRequest.h"
 #import "YZKeyChainManager.h"
+#import "YZProgressHUD.h"
 
 @interface AppDelegate() 
 
@@ -60,46 +61,49 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     [self initTabbarController];
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
     
     NSString *mobileNo = [[YZKeyChainManager defaultManager]keychainValueForKey:KMobileNO];
     NSString *password = [[YZKeyChainManager defaultManager]keychainValueForKey:KPassword];
     
     if ( !mobileNo || !password )
     {
+        DEBUG_METHOD(@"---前台登录---");
         [self performSelector:@selector(switchToLogin) withObject:nil afterDelay:0.1];
     }
     else
     {
-        __block typeof(self) bself = self;
+        DEBUG_METHOD(@"---自动登录---");
+        [[YZProgressHUD progressHUD]showOnWindow:self.window labelText:@"正在登录" detailText:nil];
+        WEAKSELF;
         [[CPHttpRequest sharedInstance]requestAutoLogin:mobileNo
                                                password:password
                                                 success:^(id responseObject) {
-            
+                                                    [[YZProgressHUD progressHUD]hideWithSuccess:@"登录成功" detailText:nil];
         } failture:^(NSError *error) {
             // 自动登陆失败，进入登陆页面
-            [bself performSelector:@selector(switchToLogin) withObject:nil afterDelay:0.1];
+            [weakSelf performSelector:@selector(switchToLogin) withObject:nil afterDelay:0.1];
         }];
     }
     
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
 - (void)switchToLogin
 {
+    [[YZProgressHUD progressHUD]hide];
     LoginViewController *loginVC = [[LoginViewController alloc]init];
     YZNavigationController *YZNavVC = [[YZNavigationController alloc]initWithRootViewController:loginVC];
-    [self.tabbarController.selectedViewController presentViewController:YZNavVC animated:NO completion:^{
+    [self.tabbarController presentViewController:YZNavVC animated:NO completion:^{
         
     }];
 }
 
-- (void)applicationWillResignActive:(UIApplication *)application
-{
-    
-}
 
+#pragma mark -
+#pragma mark NavBarStyle
 
 - (void)initNavBarTitleStyle
 {
@@ -140,6 +144,11 @@
     NSString *imageName = iOS7 ? @"navBar_ios7" :@"navBar";
     UIImage *navBarImage = [UIImage imageNamed:imageName];
     [[UINavigationBar appearance]setBackgroundImage:navBarImage forBarMetrics: UIBarMetricsDefault];
+}
+
+- (void)applicationWillResignActive:(UIApplication *)application
+{
+    
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application

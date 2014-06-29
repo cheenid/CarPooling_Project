@@ -1,1 +1,0 @@
-../../BaiduMaps-iOS-SDK/Classes/BMKGeometry.h

@@ -7,6 +7,7 @@
 //
 
 #import "MessageViewController.h"
+#import "CPHttpRequest.h"
 
 @interface MessageViewController () <UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic, strong) UITableView *tableView;
@@ -59,10 +60,28 @@
     return _tableView;
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    [self requestMyMessageList:1];
+}
+
+- (void)requestMyMessageList:(NSInteger)page
+{
+    [[CPHttpRequest sharedInstance]requestMyMsgList:page
+                                               size:100
+                                            success:^(id responseObject) {
+        
+    } failture:^(NSError *error) {
+        
+    }];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     [self.view addSubview:self.tableView];
+    
 }
 
 

@@ -13,6 +13,12 @@
 #ifdef __OBJC__
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
+    #import <CoreData/CoreData.h>
+    #import "AppDelegate.h"
+    #import "YZNavigationController.h"
+    #import "YZKeyChainManager.h"
+    #import "YZDataBaseMgr.h"
+    #import <UIKit+AFNetworking.h>
 
 #ifdef DEBUG
 #   define DEBUG_STR(...) NSLog(__VA_ARGS__);
@@ -34,5 +40,6 @@
 
 #define WEAKSELF typeof(self) __weak weakSelf = self;
 #define BLOCKSELF  __block typeof(self) bself = self;
+#define STRONGSELF typeof(weakSelf) __strong strongSelf = weakSelf;
 
 #endif

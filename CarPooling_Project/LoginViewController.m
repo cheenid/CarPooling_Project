@@ -10,6 +10,7 @@
 #import "YZTextField.h"
 #import "CPHttpRequest.h"
 #import "YZKeyChainManager.h"
+#import "YZProgressHUD.h"
 
 @interface LoginViewController () <UITextFieldDelegate>
 @property (nonatomic, strong) YZTextField *textField;
@@ -139,6 +140,10 @@
     [self registerTapGestureRecognizer];
 }
 
+
+#pragma mark -
+#pragma mark KeyBoard
+
 - (void)resignKeyBoard
 {
     if ([_textField isFirstResponder])
@@ -161,52 +166,114 @@
 
 - (void)clickToGetAuthCode
 {
-     [self resignKeyBoard];
+    [self resignKeyBoard];
+    
     if (_textField.text.length <= 0)
     {
         return;
     }
+    
+    [[YZProgressHUD progressHUD]showOnWindow:self.view.window labelText:@"请稍后" detailText:nil];
+    void (^Success) (id responseObject) = ^(id responseObject){
+        
+        if ([responseObject isKindOfClass:[NSDictionary class]])
+        {
+            NSInteger statusCode = [[responseObject objectForKey:@"statusCode"]integerValue];
+            if (statusCode == -1)
+            {
+                [[YZProgressHUD progressHUD]hideWithError:@"请重试" detailText:@"验证码获取错误"];
+            }
+            else
+            {
+                [[YZProgressHUD progressHUD]hideWithSuccess:nil detailText:@"验证码已发送"];
+            }
+        }
+        else
+        {
+            [[YZProgressHUD progressHUD]hideWithError:@"请重试" detailText:@"验证码获取错误"];
+        }
+    };
+    
+    void (^Failture)(NSError *error) = ^(NSError *error){
+        
+        [[YZProgressHUD progressHUD]hideWithError:@"请重试" detailText:@"验证码获取错误"];
+    };
+    
     // 验证手机号码的正确性
-    [[CPHttpRequest sharedInstance]requestSMS:_textField.text success:^(id responseObject) {
-        
-    } failture:^(NSError *error) {
-        
-    }];
+    [[CPHttpRequest sharedInstance]requestSMS:_textField.text
+                                      success:Success
+                                     failture:Failture];
 }
+
+/*
+ * 1.发生错误，返回状态码：-1
+ * 2.账号不存在，返回状态码：-21
+ * 3.密码错误，返回状态吗：-22
+ * 4.登陆成功，返回状态码：1
+ */
 
 - (void)rightBarBtnClick
 {
     [self resignKeyBoard];
-    if (_textField.text.length <= 0 || _codeTextField.text.length <= 0)
+    // 手机号码为空
+    if (_textField.text.length <= 0 )
     {
+        [[YZProgressHUD progressHUD]showWithError:self.view.window labelText:nil detailText:@"请输入手机号"];
+        return;
+    }
+    // 验证码为空
+    if (_codeTextField.text.length <= 0)
+    {
+        [[YZProgressHUD progressHUD]showWithError:self.view.window labelText:nil detailText:@"请输入验证码"];
         return;
     }
     
-    [[CPHttpRequest sharedInstance]requestLoginOrRegister:_textField.text
-                                                     code:_codeTextField.text
-                                                  success:^(id responseObject)
-    {
+    [[YZProgressHUD progressHUD]showOnWindow:self.view.window labelText:@"正在登录" detailText:nil];
+    
+    WEAKSELF;
+    void (^Success)(id responseObject) = ^(id responseObject){
+        
         if ([responseObject isKindOfClass:[NSDictionary class]])
         {
             NSInteger statusCode = [[responseObject objectForKey:@"statusCode"]integerValue];
             if (statusCode == 2 || statusCode == 1)
             {
+                [[YZProgressHUD progressHUD]hide];
+                
                 NSString *password = [responseObject objectForKey:@"password"];
                 [[YZKeyChainManager defaultManager]setKeychainValue:_textField.text forKey:KMobileNO];
                 [[YZKeyChainManager defaultManager]setKeychainValue:password forKey:KPassword];
                 
-                [self performSelector:@selector(dismissViewController) withObject:nil afterDelay:0.2];
+                [weakSelf performSelector:@selector(dismissViewController) withObject:nil afterDelay:1.0];
+            }
+            else if (statusCode == -11)
+            {
+                [[YZProgressHUD progressHUD]hideWithError:nil detailText:@"注册失败"];
+            }
+            else
+            {
+                [[YZProgressHUD progressHUD]hideWithError:nil detailText:@"登录失败"];
             }
         }
-                                                      
-    } failture:^(NSError *error) {
-        
+        else
+        {
+            [[YZProgressHUD progressHUD]hideWithError:nil detailText:@"登录失败"];
+        }
+    };
+    
+    [[CPHttpRequest sharedInstance]requestLoginOrRegister:_textField.text
+                                                     code:_codeTextField.text
+                                                  success:Success
+                                                 failture:^(NSError *error) {
+         [[YZProgressHUD progressHUD]hideWithError:nil detailText:@"登录失败"];
     }];
 }
 
 - (void)dismissViewController
 {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self dismissViewControllerAnimated:YES completion:^{
+        [[NSNotificationCenter defaultCenter]postNotificationName:@"EVENT_LOGIN_OK_NOTIFY" object:nil];
+    }];
 }
 
 #pragma mark -

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5064" systemVersion="13D65" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="ContactsEntity" representedClassName="ContactsEntity" syncable="YES">
+        <attribute name="accountID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="headPhoto" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isAuthedCar" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="isAuthedDriver" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="isAuthedHead" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="isAuthedIdentity" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="isDriver" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="mobile" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userID" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="MsgEntity" representedClassName="MsgEntity" syncable="YES">
+        <attribute name="accountID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="descriptions" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isDriver" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="isVerifiedDriver" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="isVerifiedPassenger" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="mobile" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="msgDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="msgID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="orderId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="photo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="userID" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="PersonalData" representedClassName="PersonalData" syncable="YES">
+        <attribute name="accountID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="backPhoto" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="birthday" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="carColor" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="carLicencesPhoto" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="carNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="carSeats" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="carType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="driverLicencesPhoto" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="frontPhoto" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="gender" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="headPhoto" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="isAuthedCar" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="isAuthedDriver" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="isAuthedHead" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="isAuthedIdentity" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="isDriver" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="nickname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="realname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="ProductsEntity" syncable="YES">
+        <attribute name="descriptions" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="photo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="score" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="ScoreRecordsEntity" representedClassName="ScoreRecordsEntity" syncable="YES">
+        <attribute name="mobileNo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="note" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="recordDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="score" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="TotalPointsEntity" representedClassName="TotalPointsEntity" syncable="YES">
+        <attribute name="accountID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="score" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="ContactsEntity" positionX="-18" positionY="171" width="128" height="193"/>
+        <element name="MsgEntity" positionX="0" positionY="189" width="128" height="253"/>
+        <element name="PersonalData" positionX="-63" positionY="9" width="128" height="360"/>
+        <element name="ScoreRecordsEntity" positionX="-36" positionY="153" width="128" height="118"/>
+        <element name="TotalPointsEntity" positionX="-54" positionY="144" width="128" height="75"/>
+        <element name="ProductsEntity" positionX="-27" positionY="162" width="128" height="120"/>
+    </elements>
+</model>

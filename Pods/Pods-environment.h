@@ -48,11 +48,11 @@
 #define COCOAPODS_VERSION_MINOR_AFNetworking_UIKit 2
 #define COCOAPODS_VERSION_PATCH_AFNetworking_UIKit 4
 
-// BaiduMaps-iOS-SDK
-#define COCOAPODS_POD_AVAILABLE_BaiduMaps_iOS_SDK
-#define COCOAPODS_VERSION_MAJOR_BaiduMaps_iOS_SDK 2
-#define COCOAPODS_VERSION_MINOR_BaiduMaps_iOS_SDK 2
-#define COCOAPODS_VERSION_PATCH_BaiduMaps_iOS_SDK 1
+// BaiduMapSDK
+#define COCOAPODS_POD_AVAILABLE_BaiduMapSDK
+#define COCOAPODS_VERSION_MAJOR_BaiduMapSDK 2
+#define COCOAPODS_VERSION_MINOR_BaiduMapSDK 3
+#define COCOAPODS_VERSION_PATCH_BaiduMapSDK 0
 
 // BaiduPushSDK
 #define COCOAPODS_POD_AVAILABLE_BaiduPushSDK
@@ -60,15 +60,22 @@
 #define COCOAPODS_VERSION_MINOR_BaiduPushSDK 1
 #define COCOAPODS_VERSION_PATCH_BaiduPushSDK 0
 
+// JSONKit
+#define COCOAPODS_POD_AVAILABLE_JSONKit
+// This library does not follow semantic-versioning,
+// so we were not able to define version macros.
+// Please contact the author.
+// Version: 1.5pre.
+
 // MBProgressHUD
 #define COCOAPODS_POD_AVAILABLE_MBProgressHUD
 #define COCOAPODS_VERSION_MAJOR_MBProgressHUD 0
 #define COCOAPODS_VERSION_MINOR_MBProgressHUD 8
 #define COCOAPODS_VERSION_PATCH_MBProgressHUD 0
 
-// Qiniu
-#define COCOAPODS_POD_AVAILABLE_Qiniu
-#define COCOAPODS_VERSION_MAJOR_Qiniu 6
-#define COCOAPODS_VERSION_MINOR_Qiniu 2
-#define COCOAPODS_VERSION_PATCH_Qiniu 2
+// TPKeyboardAvoiding
+#define COCOAPODS_POD_AVAILABLE_TPKeyboardAvoiding
+#define COCOAPODS_VERSION_MAJOR_TPKeyboardAvoiding 1
+#define COCOAPODS_VERSION_MINOR_TPKeyboardAvoiding 2
+#define COCOAPODS_VERSION_PATCH_TPKeyboardAvoiding 3
 

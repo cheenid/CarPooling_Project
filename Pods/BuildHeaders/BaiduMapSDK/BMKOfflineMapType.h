@@ -1,0 +1,1 @@
+../../BaiduMapSDK/Classes/inc/BMKOfflineMapType.h
