@@ -874,7 +874,7 @@
     DEBUG_METHOD(@"---parameters---%@",parameters);
     [manager POST:@"http://www.egoal.cn/sharecar/api/login/sms" parameters:parameters
           success:^(AFHTTPRequestOperation *operation, id responseObject) {
-              DEBUG_METHOD(@"--%s---JSON: %@",__FUNCTION__, responseObject);
+              DEBUG_METHOD(@"-----JSON: %@", responseObject);
               success(responseObject);
               
           } failure:^(AFHTTPRequestOperation *operation, NSError *error) {

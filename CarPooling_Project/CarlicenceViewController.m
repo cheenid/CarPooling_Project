@@ -110,8 +110,7 @@
 
 - (void)updateContentView
 {
-    NSString *mobileNo = [[YZKeyChainManager defaultManager]keychainValueForKey:KMobileNO];
-    PersonalData *personalData =  [[YZDataBaseMgr sharedManager]personalDataSortByAccountID:mobileNo];
+    PersonalData *personalData =  (PersonalData*)[[YZDataBaseMgr sharedManager]fetchPersonalData];
     if (personalData.carLicencesPhoto)
     {
         NSString *baseURLStr = @"http://scar.qiniudn.com/";

@@ -2,18 +2,17 @@
 //  ReleaseRouteViewController.m
 //  CarPooling_Project
 //
-//  Created by 马远征 on 14-6-19.
-//  Copyright (c) 2014年 马远征. All rights reserved.
+//  Created by 马远征 on 14-7-10.
+//  Copyright (c) 2014年 ___FULLUSERNAME___. All rights reserved.
 //
 
 #import "ReleaseRouteViewController.h"
 
 @interface ReleaseRouteViewController ()
-
+@property (nonatomic, strong) NSMutableDictionary *paramsDic;
 @end
 
 @implementation ReleaseRouteViewController
-
 #pragma mark -
 #pragma mark dealloc
 
@@ -21,7 +20,6 @@
 {
     
 }
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -29,8 +27,17 @@
 
 #pragma mark -
 #pragma mark init
+- (instancetype)initWithParams:(NSMutableDictionary*)paramsDic;
+{
+    self = [self initWithNibName:nil bundle:nil];
+    if (self)
+    {
+        _paramsDic = [NSMutableDictionary dictionaryWithDictionary:paramsDic];
+    }
+    return self;
+}
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self)
@@ -47,35 +54,14 @@
 {
     [super loadView];
     UIView *contentView = [[UIView alloc]initWithFrame:[[UIScreen mainScreen]applicationFrame]];
-    contentView.backgroundColor = [UIColor whiteColor];
+    contentView.backgroundColor = [UIColor colorWithRed:0.937 green:0.937 blue:0.961 alpha:1.0];
     self.view = contentView;
-}
-
-- (void)initRightBarButtonItem
-{
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-    [button setFrame:CGRectMake(0, 0, 80, 34)];
-    [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [button setTitleColor:[UIColor whiteColor] forState:UIControlStateHighlighted];
-    [button setTitle:@"下一步" forState:UIControlStateNormal];
-    [button setTitle:@"下一步" forState:UIControlStateHighlighted];
-    [button addTarget:self action:@selector(clickToNextStep) forControlEvents:UIControlEventTouchUpInside];
-    
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:button];
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self initRightBarButtonItem];
 }
 
-#pragma mark -
-#pragma mark 下一步
-
-- (void)clickToNextStep
-{
-    
-}
 
 @end

@@ -100,8 +100,7 @@
 
 - (void)updateContentView
 {
-    NSString *mobileNo = [[YZKeyChainManager defaultManager]keychainValueForKey:KMobileNO];
-    PersonalData *personalData =  [[YZDataBaseMgr sharedManager]personalDataSortByAccountID:mobileNo];
+    PersonalData *personalData =  (PersonalData*)[[YZDataBaseMgr sharedManager]fetchPersonalData];
     if (personalData.headPhoto)
     {
         NSString *baseURLStr = @"http://scar.qiniudn.com/";
@@ -140,8 +139,7 @@
     [qiniuUploader execuploadTask:^(AFHTTPRequestOperation *operation, NSInteger index, NSDictionary *ret) {
         
         DEBUG_METHOD(@"index:%ld ret:%@",(long)index,ret);
-        NSString *key = ret[@"key"];
-        [weakSelf uploadAvatarImageData:key];
+        [weakSelf uploadAvatarImageData:ret[@"key"]];
         
     } oneFileUploadFailture:^(AFHTTPRequestOperation *operation, NSInteger index, NSError *error){
         

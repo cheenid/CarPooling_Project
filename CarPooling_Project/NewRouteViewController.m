@@ -7,14 +7,23 @@
 //
 
 #import "NewRouteViewController.h"
-#import "ReleaseRouteViewController.h"
+#import "DatePickerViewController.h"
+#import "BDMapViewController.h"
+#import "YZUISegmentControl.h"
+#import "YZProgressHUD.h"
 
 @interface NewRouteViewController () <UITableViewDataSource,UITableViewDelegate>
-@property (nonatomic, strong) UISegmentedControl *userTypeSegControl;
-@property (nonatomic, strong) UISegmentedControl *routeTypeSegControl;
+{
+    UIButton *addButton;
+}
+@property (nonatomic, strong) YZUISegmentControl *userTypeSegControl;
+@property (nonatomic, strong) YZUISegmentControl *routeTypeSegControl;
 @property (nonatomic, strong) UITextField *spTextField;
 @property (nonatomic, strong) UITextField *epTextField;
 @property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) UILabel *splabel;
+@property (nonatomic, strong) UILabel *eplabel;
+@property (nonatomic, strong) NSMutableArray *cityNodesArray;
 @end
 
 @implementation NewRouteViewController
@@ -45,6 +54,15 @@
     return self;
 }
 
+- (NSMutableArray*)cityNodesArray
+{
+    if (_cityNodesArray == nil)
+    {
+        _cityNodesArray = [[NSMutableArray alloc]init];
+    }
+    return _cityNodesArray;
+}
+
 #pragma mark -
 #pragma mark View
 
@@ -53,10 +71,10 @@
     if (_userTypeSegControl == nil)
     {
         NSArray *itemsArray = [NSArray arrayWithObjects:@"司机",@"乘客", nil];
-        _userTypeSegControl = [[UISegmentedControl alloc]initWithItems:itemsArray];
+        _userTypeSegControl = [[YZUISegmentControl alloc]initWithItems:itemsArray];
         [_userTypeSegControl setFrame:CGRectMake(100, 10, 100, 24)];
-        [_userTypeSegControl setTintColor:[UIColor redColor]];
         [_userTypeSegControl setSegmentedControlStyle:UISegmentedControlStylePlain];
+        [_userTypeSegControl setSelectedSegmentIndex:0];
         [_userTypeSegControl setTag:10010];
         [_userTypeSegControl addTarget:self action:@selector(segmentedControlValueChange:) forControlEvents:UIControlEventValueChanged];
     }
@@ -68,9 +86,9 @@
     if (_routeTypeSegControl == nil)
     {
         NSArray *itemsArray = [NSArray arrayWithObjects:@"长途",@"短途",@"上下班", nil];
-        _routeTypeSegControl = [[UISegmentedControl alloc]initWithItems:itemsArray];
-        [_routeTypeSegControl setFrame:CGRectMake(100, 40, 150, 24)];
-        [_routeTypeSegControl setTintColor:[UIColor redColor]];
+        _routeTypeSegControl = [[YZUISegmentControl alloc]initWithItems:itemsArray];
+        [_routeTypeSegControl setFrame:CGRectMake(100, 40, 180, 24)];
+        [_routeTypeSegControl setSelectedSegmentIndex:0];
         [_routeTypeSegControl setSegmentedControlStyle:UISegmentedControlStylePlain];
         [_routeTypeSegControl setTag:10011];
         [_routeTypeSegControl addTarget:self action:@selector(segmentedControlValueChange:) forControlEvents:UIControlEventValueChanged];
@@ -86,7 +104,14 @@
     }
     else
     {
-        
+        if (segControl.selectedSegmentIndex == 0)
+        {
+            addButton.enabled = NO;
+        }
+        else
+        {
+            addButton.enabled = YES;
+        }
     }
 }
 
@@ -102,6 +127,7 @@
         [_spTextField.layer setCornerRadius:2.0];
         [_spTextField.layer setMasksToBounds:YES];
         [_spTextField setFont:[UIFont fontWithName:@"helvetica" size:14]];
+        [_spTextField setUserInteractionEnabled:YES];
     }
     return _spTextField;
 }
@@ -118,9 +144,44 @@
         [_epTextField.layer setCornerRadius:2.0];
         [_epTextField.layer setMasksToBounds:YES];
         [_epTextField setFont:[UIFont fontWithName:@"helvetica" size:14]];
+        [_epTextField setUserInteractionEnabled:YES];
     }
     return _epTextField;
 }
+
+- (UILabel*)splabel
+{
+    if (_splabel == nil)
+    {
+        _splabel = [[UILabel alloc]initWithFrame:CGRectMake(100, 80, 200, 30)];
+        [_splabel setBackgroundColor:[UIColor whiteColor]];
+        [_splabel.layer setBorderColor:[UIColor blackColor].CGColor];
+        [_splabel.layer setBorderWidth:1.0];
+        [_splabel.layer setCornerRadius:2.0];
+        [_splabel.layer setMasksToBounds:YES];
+        [_splabel setFont:[UIFont fontWithName:@"helvetica" size:14]];
+        [_splabel setUserInteractionEnabled:YES];
+    }
+    return _splabel;
+}
+
+
+- (UILabel*)eplabel
+{
+    if (_eplabel == nil)
+    {
+        _eplabel = [[UILabel alloc]initWithFrame:CGRectMake(100, 120, 200, 30)];
+        [_eplabel setBackgroundColor:[UIColor whiteColor]];
+        [_eplabel.layer setBorderColor:[UIColor blackColor].CGColor];
+        [_eplabel.layer setBorderWidth:1.0];
+        [_eplabel.layer setCornerRadius:2.0];
+        [_eplabel.layer setMasksToBounds:YES];
+        [_eplabel setFont:[UIFont fontWithName:@"helvetica" size:14]];
+        [_eplabel setUserInteractionEnabled:YES];
+    }
+    return _eplabel;
+}
+
 
 - (UITableView*)tableView
 {
@@ -132,6 +193,7 @@
     }
     return _tableView;
 }
+
 #pragma mark -
 #pragma mark loadView
 
@@ -201,15 +263,17 @@
     [backGroundView.layer setBorderWidth:1.0];
     [self.view addSubview:backGroundView];
     
-    UIButton *addButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    addButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [addButton setFrame:CGRectMake(0, 0, KScreenWidth-20, 34)];
     [addButton setTitle:@"请点击添加途经点" forState:UIControlStateNormal];
     [addButton setTitle:@"请点击添加途经点" forState:UIControlStateHighlighted];
     [addButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [addButton setTitleColor:[UIColor redColor] forState:UIControlStateHighlighted];
+    [addButton setTitleColor:[UIColor grayColor] forState:UIControlStateDisabled];
     [addButton addTarget:self action:@selector(clicktoAddRoutes) forControlEvents:UIControlEventTouchUpInside];
     [addButton.layer setBorderWidth:1.0];
     [addButton.layer setBorderColor:[UIColor colorWithRed:0.937 green:0.937 blue:0.961 alpha:1.0].CGColor];
+    [addButton setEnabled:NO];
     [backGroundView addSubview:addButton];
     [backGroundView addSubview:self.tableView];
 }
@@ -218,14 +282,13 @@
 {
     UITapGestureRecognizer *spTapGuesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapToSelectStartPoint)];
     spTapGuesture.numberOfTapsRequired = 1;
-    [self.spTextField addGestureRecognizer:spTapGuesture];
+    [self.splabel addGestureRecognizer:spTapGuesture];
     
     UITapGestureRecognizer *epTapGuesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapToSelectEndPoint)];
     epTapGuesture.numberOfTapsRequired = 1;
-    [self.epTextField addGestureRecognizer:epTapGuesture];
-
-    
+    [self.eplabel addGestureRecognizer:epTapGuesture];
 }
+
 
 - (void)viewDidLoad
 {
@@ -234,22 +297,77 @@
     [self initViews];
     [self.view addSubview:self.userTypeSegControl];
     [self.view addSubview:self.routeTypeSegControl];
-    [self.view addSubview:self.spTextField];
-    [self.view addSubview:self.epTextField];
+    [self.view addSubview:self.splabel];
+    [self.view addSubview:self.eplabel];
     [self initTapGuesture];
 }
 
+
+
+
 #pragma mark -
 #pragma mark UITapGestureRecognizer
-
+// 选择起点线路
 - (void)tapToSelectStartPoint
 {
-    
+    LogFUNC;
+    NSDictionary *cityNode = nil;
+    if (self.cityNodesArray && self.cityNodesArray.count > 1)
+    {
+        cityNode = [self.cityNodesArray firstObject];
+    }
+    WEAKSELF;
+    BDMapViewController *BDMapViewVC = [[BDMapViewController alloc]initWithCityNode:cityNode];
+    [BDMapViewVC setCompletePoiSearch:^(MplcCityNode node) {
+        
+        NSLog(@"----node---%@",NSStringFromMplcCityNode(node));
+        STRONGSELF;
+        strongSelf->_splabel.text = (__bridge NSString *)(node.name);
+        NSDictionary *cityNodeDic = @{@"name":(__bridge NSString *)(node.name),
+                                      @"address":(__bridge NSString *)(node.address),
+                                      @"type":@1,
+                                      @"latitude":@(node.latitude),
+                                      @"longitude":@(node.longitude)};
+        if (strongSelf.cityNodesArray.count > 0)
+        {
+            [strongSelf.cityNodesArray removeObjectAtIndex:0];
+        }
+        [strongSelf.cityNodesArray insertObject:cityNodeDic atIndex:0];
+    }];
+    [self.navigationController pushViewController:BDMapViewVC animated:YES];
+    BDMapViewVC = nil;
 }
 
+// 选择终点线路
 - (void)tapToSelectEndPoint
 {
-    
+    LogFUNC;
+    NSDictionary *cityNode = nil;
+    if (self.cityNodesArray && self.cityNodesArray.count > 1)
+    {
+        cityNode = [self.cityNodesArray lastObject];
+    }
+    WEAKSELF;
+    BDMapViewController *BDMapViewVC = [[BDMapViewController alloc]initWithCityNode:cityNode];
+    [BDMapViewVC setCompletePoiSearch:^(MplcCityNode node) {
+        NSLog(@"----node---%@",NSStringFromMplcCityNode(node));
+        STRONGSELF;
+        strongSelf->_eplabel.text = (__bridge NSString *)(node.name);
+        
+        NSDictionary *cityNodeDic = @{@"name":(__bridge NSString *)(node.name),
+                                      @"address":(__bridge NSString *)(node.address),
+                                      @"type":@2,
+                                      @"latitude":@(node.latitude),
+                                      @"longitude":@(node.longitude)};
+        if (strongSelf.cityNodesArray.count > 1)
+        {
+            [strongSelf.cityNodesArray removeLastObject];
+        }
+        [strongSelf.cityNodesArray addObject:cityNodeDic];
+        
+    }];
+    [self.navigationController pushViewController:BDMapViewVC animated:YES];
+    BDMapViewVC = nil;
 }
 
 #pragma mark -
@@ -257,26 +375,69 @@
 
 - (void)clicktoAddRoutes
 {
-    if (_spTextField.text.length <= 0)
+    LogFUNC;
+    if (_splabel.text.length <= 0)
     {
+        [[YZProgressHUD progressHUD]showWithError:self.view.window labelText:nil detailText:@"请选择起点路线"];
         return;
     }
     
-    if (_epTextField.text.length <= 0)
+    if (_eplabel.text.length <= 0)
     {
+        [[YZProgressHUD progressHUD]showWithError:self.view.window labelText:nil detailText:@"请选择终点路线"];
         return;
     }
+    
+
+    WEAKSELF;
+    BDMapViewController *BDMapViewVC = [[BDMapViewController alloc]initWithCityNode:nil];
+    [BDMapViewVC setCompletePoiSearch:^(MplcCityNode node) {
+        STRONGSELF;
+        NSLog(@"----node---%@",NSStringFromMplcCityNode(node));
+        
+        strongSelf->_eplabel.text = (__bridge NSString *)(node.name);
+        NSDictionary *cityNodeDic = @{@"name":(__bridge NSString *)(node.name),
+                                      @"address":(__bridge NSString *)(node.address),
+                                      @"type":@3,
+                                      @"latitude":@(node.latitude),
+                                      @"longitude":@(node.longitude)};
+
+        NSDictionary *lastObject = [strongSelf.cityNodesArray lastObject];
+        if (lastObject)
+        {
+            NSInteger index = [strongSelf.cityNodesArray indexOfObject:lastObject];
+            [strongSelf.cityNodesArray insertObject:cityNodeDic atIndex:index];
+        }
+    }];
+    [self.navigationController pushViewController:BDMapViewVC animated:YES];
+    BDMapViewVC = nil;
 }
 
 - (void)clickToReleaseRoute
 {
-    ReleaseRouteViewController *releaseRouteVC = [[ReleaseRouteViewController alloc]init];
+    if (_splabel.text.length <= 0)
+    {
+        [[YZProgressHUD progressHUD]showWithError:self.view.window labelText:nil detailText:@"请选择起点路线"];
+        return;
+    }
+    
+    if (_eplabel.text.length <= 0)
+    {
+        [[YZProgressHUD progressHUD]showWithError:self.view.window labelText:nil detailText:@"请选择终点路线"];
+        return;
+    }
+    
+    NSDictionary *paramsDic = @{@"personType":@(_userTypeSegControl.selectedSegmentIndex+1),
+                                @"routeType":@(_routeTypeSegControl.selectedSegmentIndex+1),
+                                @"nodes":_cityNodesArray};
+    DatePickerViewController *releaseRouteVC = [[DatePickerViewController alloc]initWithPostParams:paramsDic];
     [self.navigationController pushViewController:releaseRouteVC animated:YES];
     releaseRouteVC = nil;
 }
 
 #pragma mark -
 #pragma mark UItableView
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 1;
@@ -284,7 +445,41 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 0;
+    return (self.cityNodesArray.count -2) > 0 ? (self.cityNodesArray.count - 2):0;
+}
+
+- (NSString*)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return @"删除";
+}
+
+-(UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return UITableViewCellEditingStyleDelete;
+}
+
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return YES;
+}
+
+-(void)setEditing:(BOOL)editing animated:(BOOL)animated
+{
+    [super setEditing:editing animated:animated];
+    [self.tableView setEditing:editing animated:animated];
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (editingStyle == UITableViewCellEditingStyleDelete)
+    {
+        if (self.cityNodesArray.count > 2)
+        {
+            [self.cityNodesArray removeObjectAtIndex:indexPath.row+1];
+            [self.tableView reloadData];
+        }
+    }
 }
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -295,6 +490,39 @@
     {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
+    NSDictionary *tmpDic = [self.cityNodesArray objectAtIndex:indexPath.row+1];
+    if (tmpDic)
+    {
+        cell.textLabel.text = tmpDic[@"name"];
+    }
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    NSDictionary *tmpDic = [self.cityNodesArray objectAtIndex:indexPath.row+1];
+    if (tmpDic == nil)
+    {
+        return;
+    }
+    WEAKSELF;
+    BDMapViewController *BDMapViewVC = [[BDMapViewController alloc]initWithCityNode:tmpDic];
+    [BDMapViewVC setCompletePoiSearch:^(MplcCityNode node) {
+        STRONGSELF;
+        NSLog(@"----node---%@",NSStringFromMplcCityNode(node));
+        strongSelf->_eplabel.text = (__bridge NSString *)(node.name);
+        
+        NSDictionary *cityNodeDic = @{@"name":(__bridge NSString *)(node.name),
+                                      @"address":(__bridge NSString *)(node.address),
+                                      @"type":@3,
+                                      @"latitude":@(node.latitude),
+                                      @"longitude":@(node.longitude)};
+        
+        [strongSelf.cityNodesArray replaceObjectAtIndex:indexPath.row+1 withObject:cityNodeDic];
+
+    }];
+    [self.navigationController pushViewController:BDMapViewVC animated:YES];
+    BDMapViewVC = nil;
 }
 @end

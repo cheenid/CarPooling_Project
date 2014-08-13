@@ -71,18 +71,28 @@
 
 - (void)getMyTotalPoints
 {
+    WEAKSELF;
     [[CPHttpRequest sharedInstance]requestTotalScore:^(id responseObject)
     {
+        STRONGSELF;
         if ([responseObject isKindOfClass:[NSDictionary class]])
         {
-            _myPoints = [responseObject[@"score"]integerValue];
-            [self.tableView reloadData];
+            [strongSelf.tableView reloadData];
             NSInteger  statusCode = [responseObject[@"statusCode"]integerValue];
             if (statusCode == 1)
             {
-                NSString *accountID = [[YZKeyChainManager defaultManager]keychainValueForKey:KMobileNO];
-                NSDictionary *params = @{@"score":responseObject[@"score"],@"accountID":accountID};
-                [[YZDataBaseMgr sharedManager]insertOrUpdateTotalScore:params];
+                NSDictionary *params = @{@"score":responseObject[@"score"]};
+                WEAKSELF;
+                YZDataBaseMgr *dbMgr = [YZDataBaseMgr sharedManager];
+                [dbMgr insertOrUpdateTotalScore:params
+                                       complete:^(TotalPointsEntity *object, BOOL ret) {
+                                           STRONGSELF;
+                                           if (ret)
+                                           {
+                                               DEBUG_METHOD(@"--更新成功--");
+                                               strongSelf->_myPoints = [responseObject[@"score"]integerValue];
+                                           }
+                }];
             }
         }
         

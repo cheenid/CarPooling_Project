@@ -2,7 +2,7 @@
 //  PersonalData.m
 //  CarPooling_Project
 //
-//  Created by 马远征 on 14-6-18.
+//  Created by 马远征 on 14-7-2.
 //  Copyright (c) 2014年 马远征. All rights reserved.
 //
 
@@ -11,17 +11,18 @@
 
 @implementation PersonalData
 
-@dynamic accountID;
 @dynamic backPhoto;
 @dynamic birthday;
 @dynamic carColor;
 @dynamic carLicencesPhoto;
 @dynamic carNumber;
+@dynamic carSeats;
 @dynamic carType;
 @dynamic driverLicencesPhoto;
 @dynamic frontPhoto;
 @dynamic gender;
 @dynamic headPhoto;
+@dynamic id;
 @dynamic isAuthedCar;
 @dynamic isAuthedDriver;
 @dynamic isAuthedHead;
@@ -29,8 +30,6 @@
 @dynamic isDriver;
 @dynamic nickname;
 @dynamic realname;
-@dynamic id;
 @dynamic username;
-@dynamic carSeats;
 
 @end

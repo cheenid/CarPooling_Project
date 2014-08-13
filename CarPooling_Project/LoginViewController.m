@@ -11,6 +11,7 @@
 #import "CPHttpRequest.h"
 #import "YZKeyChainManager.h"
 #import "YZProgressHUD.h"
+#import "CPASIHttpRequest.h"
 
 @interface LoginViewController () <UITextFieldDelegate>
 @property (nonatomic, strong) YZTextField *textField;
@@ -231,7 +232,7 @@
     [[YZProgressHUD progressHUD]showOnWindow:self.view.window labelText:@"正在登录" detailText:nil];
     
     WEAKSELF;
-    void (^Success)(id responseObject) = ^(id responseObject){
+    void (^Success)(id responseObject) = ^(id responseObject) {
         
         if ([responseObject isKindOfClass:[NSDictionary class]])
         {
@@ -261,12 +262,19 @@
         }
     };
     
-    [[CPHttpRequest sharedInstance]requestLoginOrRegister:_textField.text
-                                                     code:_codeTextField.text
-                                                  success:Success
-                                                 failture:^(NSError *error) {
-         [[YZProgressHUD progressHUD]hideWithError:nil detailText:@"登录失败"];
-    }];
+//    [[CPHttpRequest sharedInstance]requestLoginOrRegister:_textField.text
+//                                                     code:_codeTextField.text
+//                                                  success:Success
+//                                                 failture:^(NSError *error) {
+//         [[YZProgressHUD progressHUD]hideWithError:nil detailText:@"登录失败"];
+//    }];
+    
+    [[CPASIHttpRequest shared]requestLoginOrRegister:_textField.text
+                                                code:_codeTextField.text
+                                             success:Success
+                                            failture:^(NSError *error) {
+    [[YZProgressHUD progressHUD]hideWithError:nil detailText:@"登录失败"];
+                                             }];
 }
 
 - (void)dismissViewController

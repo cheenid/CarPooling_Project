@@ -11,15 +11,21 @@
 #import "MsgEntity.h"
 #import "ScoreRecordsEntity.h"
 #import "TotalPointsEntity.h"
+#import "CreateNodesEntity.h"
+#import "CreateRouteEntity.h"
 
 @interface YZDataBaseMgr : IQDatabaseManager
 
 // personalData
-- (NSArray*)allObjectsSortByPredicate:(NSPredicate*)predicate;
-- (PersonalData*)personalDataSortByAccountID:(NSString*)accountID;
-- (PersonalData*)insertOrUpdatePersonalData:(NSDictionary*)attribute;
+- (NSManagedObject*)fetchPersonalData;
+- (void)insertOrUpdatePersonalData:(NSDictionary*)attribute
+                          complete:(void(^)(NSManagedObject *object,BOOL ret))result;
 
 // totalScore
 - (TotalPointsEntity*)fetchTotalScore;
-- (TotalPointsEntity*)insertOrUpdateTotalScore:(NSDictionary*)attribute;
+- (void)insertOrUpdateTotalScore:(NSDictionary*)attribute
+                        complete:(void(^)(TotalPointsEntity *object,BOOL ret))result;
+
+- (void)insertOrUpdateCtRoute:(NSDictionary*)attribute
+                     complete:(void(^)(NSManagedObject *object,BOOL ret))result;
 @end

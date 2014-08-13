@@ -49,11 +49,7 @@
 
 
 @implementation IQDatabaseManager
-{
-    NSManagedObjectContext *_managedObjectContext;
-    NSManagedObjectModel *_managedObjectModel;
-    NSPersistentStoreCoordinator *_persistentStoreCoordinator;
-}
+
 
 
 #pragma mark - Abstract method exceptions.

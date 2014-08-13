@@ -151,8 +151,7 @@ typedef NS_ENUM(NSInteger, PhotoPickerType)
 
 - (void)updateContentView
 {
-    NSString *mobileNo = [[YZKeyChainManager defaultManager]keychainValueForKey:KMobileNO];
-    PersonalData *personalData =  [[YZDataBaseMgr sharedManager]personalDataSortByAccountID:mobileNo];
+    PersonalData *personalData =  (PersonalData*)[[YZDataBaseMgr sharedManager]fetchPersonalData];
     if (personalData.frontPhoto)
     {
         NSString *baseURLStr = @"http://scar.qiniudn.com/";
@@ -322,7 +321,6 @@ typedef NS_ENUM(NSInteger, PhotoPickerType)
 
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-    DEBUG_METHOD(@"---buttonIndex--%d",buttonIndex);
     if (actionSheet.tag == 11110)
     {
         if (buttonIndex == 0)

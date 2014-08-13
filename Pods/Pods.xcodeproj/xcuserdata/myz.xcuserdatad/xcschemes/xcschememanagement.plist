@@ -9,12 +9,12 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-BaiduMapSDK.xcscheme</key>
+		<key>Pods-ASIHTTPRequest.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-BaiduPushSDK.xcscheme</key>
+		<key>Pods-BaiduMapSDK.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -25,6 +25,11 @@
 			<false/>
 		</dict>
 		<key>Pods-MBProgressHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Reachability.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -42,37 +47,42 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>2A928046FF6C47299DBBD579</key>
+		<key>36412857485849BB8ACDADE1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5178ED3A2CF7436BB600F065</key>
+		<key>64FB2107B3664B409B523576</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>71070F656291438B8D1367AF</key>
+		<key>C4C08ECE82614DA6942F321F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>ACDBBA06C63D4F689AC61B74</key>
+		<key>C9CAB2A0A4CE4E4BB2B2DEEC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B5F8EF860B8642CC88B02133</key>
+		<key>CC510769723C47F8B687410A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BE039210425946A8A17DA18A</key>
+		<key>D01CBC210D2141479BF89F8A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D63A14E14F8146C7B9C73A14</key>
+		<key>D2D1688C0B91423E9211A3F6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D43D759A31F0407B8EC61307</key>
 		<dict>
 			<key>primary</key>
 			<true/>

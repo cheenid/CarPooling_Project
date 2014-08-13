@@ -136,11 +136,6 @@
         return nil;
     }
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    NSString *mobileNo = [[YZKeyChainManager defaultManager]keychainValueForKey:KMobileNO];
-    if (mobileNo)
-    {
-        [params setObject:mobileNo forKey:@"accountID"];
-    }
     [self enumerationDic:retDic withDic:params];
     return params;
 }
@@ -161,7 +156,14 @@
                     if (parmas)
                     {
                         NSLog(@"---params---%@",parmas);
-                        [[YZDataBaseMgr sharedManager]insertOrUpdatePersonalData:parmas];
+                        YZDataBaseMgr *dbMgr = [YZDataBaseMgr sharedManager];
+                        [dbMgr insertOrUpdatePersonalData:parmas
+                                                 complete:^(NSManagedObject *object, BOOL ret) {
+                                                     if (ret)
+                                                     {
+                                                         NSLog(@"----插入/更新成功--");
+                                                     }
+                        }];
                     }
                 }
             }

@@ -49,6 +49,9 @@ Faulting is a mechanism Core Data employs to reduce your application’s memory 
 //Created by Iftekhar. 17/4/13.
 @interface IQDatabaseManager : NSObject
 
+@property (nonatomic, strong, readonly) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, strong, readonly) NSManagedObjectModel *managedObjectModel;
+@property (nonatomic, strong, readonly) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 //Shared Object.
 + (IQ_INSTANCETYPE )sharedManager;
 

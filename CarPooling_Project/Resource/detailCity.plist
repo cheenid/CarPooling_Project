@@ -1,0 +1,2862 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>上海市</key>
+	<array>
+		<dict>
+			<key>城市名</key>
+			<string>上 海</string>
+			<key>纬度</key>
+			<real>31.13</real>
+			<key>经度</key>
+			<real>121.29</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>嘉 定</string>
+			<key>纬度</key>
+			<real>31.24</real>
+			<key>经度</key>
+			<real>121.14</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>宝 山</string>
+			<key>纬度</key>
+			<real>31.25</real>
+			<key>经度</key>
+			<real>121.29</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>川 沙</string>
+			<key>纬度</key>
+			<real>31.11</real>
+			<key>经度</key>
+			<real>121.42</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>南 汇</string>
+			<key>纬度</key>
+			<real>31.03</real>
+			<key>经度</key>
+			<real>121.46</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>奉 贤</string>
+			<key>纬度</key>
+			<real>30.55</real>
+			<key>经度</key>
+			<real>121.28</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>松 江</string>
+			<key>纬度</key>
+			<real>31</real>
+			<key>经度</key>
+			<real>121.14</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>金 山</string>
+			<key>纬度</key>
+			<real>30.53</real>
+			<key>经度</key>
+			<real>121.1</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>青 浦</string>
+			<key>纬度</key>
+			<real>31.09</real>
+			<key>经度</key>
+			<real>121.06</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>崇 明</string>
+			<key>纬度</key>
+			<real>31.44</real>
+			<key>经度</key>
+			<real>121.24</real>
+		</dict>
+	</array>
+	<key>北京市</key>
+	<array>
+		<dict>
+			<key>城市名</key>
+			<string>北 京</string>
+			<key>纬度</key>
+			<real>39.55</real>
+			<key>经度</key>
+			<real>116.28</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>平 谷</string>
+			<key>纬度</key>
+			<real>40.08</real>
+			<key>经度</key>
+			<real>117.06</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>密 云</string>
+			<key>纬度</key>
+			<real>40.22</real>
+			<key>经度</key>
+			<real>116.51</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>顺 义</string>
+			<key>纬度</key>
+			<real>40.08</real>
+			<key>经度</key>
+			<real>116.39</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>通 县</string>
+			<key>纬度</key>
+			<real>39.55</real>
+			<key>经度</key>
+			<real>116.4</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>怀 柔</string>
+			<key>纬度</key>
+			<real>39.55</real>
+			<key>经度</key>
+			<real>116.4</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>大 兴</string>
+			<key>纬度</key>
+			<real>39.44</real>
+			<key>经度</key>
+			<real>116.2</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>房 山</string>
+			<key>纬度</key>
+			<real>39.43</real>
+			<key>经度</key>
+			<real>115.59</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>延 庆</string>
+			<key>纬度</key>
+			<real>40.28</real>
+			<key>经度</key>
+			<real>115.58</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>昌 平</string>
+			<key>纬度</key>
+			<real>40.13</real>
+			<key>经度</key>
+			<real>116.62</real>
+		</dict>
+	</array>
+	<key>天津市</key>
+	<array>
+		<dict>
+			<key>城市名</key>
+			<string>天 津</string>
+			<key>纬度　</key>
+			<real>39.08</real>
+			<key>经度</key>
+			<real>117.12</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>宁 河</string>
+			<key>纬度　</key>
+			<real>39.2</real>
+			<key>经度</key>
+			<real>117.5</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>静 海</string>
+			<key>纬度　</key>
+			<real>38.56</real>
+			<key>经度</key>
+			<real>116.55</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>蓟 县</string>
+			<key>纬度　</key>
+			<real>40.03</real>
+			<key>经度</key>
+			<real>117.24</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>宝 坻</string>
+			<key>纬度　</key>
+			<real>39.45</real>
+			<key>经度</key>
+			<real>117.18</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>武 清</string>
+			<key>纬度　</key>
+			<real>39.24</real>
+			<key>经度</key>
+			<real>117.03</real>
+		</dict>
+	</array>
+	<key>浙江省</key>
+	<array>
+		<dict>
+			<key>城市名</key>
+			<string>杭 州</string>
+			<key>纬度　</key>
+			<real>30.16</real>
+			<key>经度</key>
+			<real>120.11</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>余 杭</string>
+			<key>纬度　</key>
+			<real>30.26</real>
+			<key>经度</key>
+			<real>120.18</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>富 阳</string>
+			<key>纬度　</key>
+			<real>30.04</real>
+			<key>经度</key>
+			<real>119.57</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>建 德</string>
+			<key>纬度　</key>
+			<real>29.29</real>
+			<key>经度</key>
+			<real>119.16</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>临 安</string>
+			<key>纬度　</key>
+			<real>30.14</real>
+			<key>经度</key>
+			<real>119.43</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>萧 山</string>
+			<key>纬度　</key>
+			<real>30.1</real>
+			<key>经度</key>
+			<real>120.15</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>桐 庐</string>
+			<key>纬度　</key>
+			<real>29.48</real>
+			<key>经度</key>
+			<real>119.38</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>淳 安</string>
+			<key>纬度　</key>
+			<real>29.37</real>
+			<key>经度</key>
+			<real>119.03</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>宁 波</string>
+			<key>纬度　</key>
+			<real>29.52</real>
+			<key>经度</key>
+			<real>121.34</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>镇 海</string>
+			<key>纬度　</key>
+			<real>29.58</real>
+			<key>经度</key>
+			<real>121.43</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>温 州</string>
+			<key>纬度　</key>
+			<real>28.01</real>
+			<key>经度</key>
+			<real>120.39</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>瓯 海</string>
+			<key>纬度　</key>
+			<real>28.01</real>
+			<key>经度</key>
+			<real>120.39</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>永 喜</string>
+			<key>纬度　</key>
+			<real>28.1</real>
+			<key>经度</key>
+			<real>120.41</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>洞 头</string>
+			<key>纬度　</key>
+			<real>27.5</real>
+			<key>经度</key>
+			<real>121.07</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>平 阳</string>
+			<key>纬度　</key>
+			<real>27.41</real>
+			<key>经度</key>
+			<real>120.33</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>泰 顺</string>
+			<key>纬度　</key>
+			<real>27.34</real>
+			<key>经度</key>
+			<real>119.42</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>乐 清</string>
+			<key>纬度　</key>
+			<real>28.08</real>
+			<key>经度</key>
+			<real>120.56</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>瑞 安</string>
+			<key>纬度　</key>
+			<real>27.48</real>
+			<key>经度</key>
+			<real>120.37</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>文 成</string>
+			<key>纬度　</key>
+			<real>27.05</real>
+			<key>经度</key>
+			<real>120.05</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>苍 南</string>
+			<key>纬度　</key>
+			<real>27.32</real>
+			<key>经度</key>
+			<real>120.05</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>湖 州</string>
+			<key>纬度　</key>
+			<real>30.52</real>
+			<key>经度</key>
+			<real>120.06</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>平 湖</string>
+			<key>纬度　</key>
+			<real>30.42</real>
+			<key>经度</key>
+			<real>121.01</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>桐 乡</string>
+			<key>纬度　</key>
+			<real>30.38</real>
+			<key>经度</key>
+			<real>120.32</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>安 吉</string>
+			<key>纬度　</key>
+			<real>30.41</real>
+			<key>经度</key>
+			<real>119.41</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>嘉 善</string>
+			<key>纬度　</key>
+			<real>30.5</real>
+			<key>经度</key>
+			<real>120.55</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>嘉 兴</string>
+			<key>纬度　</key>
+			<real>30.46</real>
+			<key>经度</key>
+			<real>120.46</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>海 盐</string>
+			<key>纬度　</key>
+			<real>30.32</real>
+			<key>经度</key>
+			<real>120.55</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>海 宁</string>
+			<key>纬度　</key>
+			<real>30.32</real>
+			<key>经度</key>
+			<real>120.41</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>德 清</string>
+			<key>纬度　</key>
+			<real>30.32</real>
+			<key>经度</key>
+			<real>120.05</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>长 兴</string>
+			<key>纬度　</key>
+			<real>30.01</real>
+			<key>经度</key>
+			<real>119.55</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>定 海</string>
+			<key>纬度　</key>
+			<real>30.02</real>
+			<key>经度</key>
+			<real>122.07</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>岱 山</string>
+			<key>纬度　</key>
+			<real>30.16</real>
+			<key>经度</key>
+			<real>122.12</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>嵊 四</string>
+			<key>纬度　</key>
+			<real>30.43</real>
+			<key>经度</key>
+			<real>122.27</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>普 陀</string>
+			<key>纬度　</key>
+			<real>29.58</real>
+			<key>经度</key>
+			<real>122.18</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>鄞 县</string>
+			<key>纬度　</key>
+			<real>29.52</real>
+			<key>经度</key>
+			<real>121.34</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>象 山</string>
+			<key>纬度　</key>
+			<real>29.29</real>
+			<key>经度</key>
+			<real>121.48</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>奉 化</string>
+			<key>纬度　</key>
+			<real>29.4</real>
+			<key>经度</key>
+			<real>121.25</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>慈 溪</string>
+			<key>纬度　</key>
+			<real>30.11</real>
+			<key>经度</key>
+			<real>121.14</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>宁 海</string>
+			<key>纬度　</key>
+			<real>29.18</real>
+			<key>经度</key>
+			<real>121.25</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>余 姚</string>
+			<key>纬度　</key>
+			<real>30.02</real>
+			<key>经度</key>
+			<real>121.1</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>绍 兴</string>
+			<key>纬度　</key>
+			<real>30.01</real>
+			<key>经度</key>
+			<real>120.35</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>新 昌</string>
+			<key>纬度　</key>
+			<real>29.29</real>
+			<key>经度</key>
+			<real>120.53</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>诸 暨</string>
+			<key>纬度　</key>
+			<real>29.43</real>
+			<key>经度</key>
+			<real>120.14</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>上 虞</string>
+			<key>纬度　</key>
+			<real>30.02</real>
+			<key>经度</key>
+			<real>120.52</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>嵊 县</string>
+			<key>纬度　</key>
+			<real>29.36</real>
+			<key>经度</key>
+			<real>120.49</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>椒 江</string>
+			<key>纬度　</key>
+			<real>28.4</real>
+			<key>经度</key>
+			<real>121.26</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>临 海</string>
+			<key>纬度　</key>
+			<real>28.48</real>
+			<key>经度</key>
+			<real>121.08</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>三 门</string>
+			<key>纬度　</key>
+			<real>29.07</real>
+			<key>经度</key>
+			<real>121.23</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>温 岭</string>
+			<key>纬度　</key>
+			<real>28.22</real>
+			<key>经度</key>
+			<real>121.22</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>仙 居</string>
+			<key>纬度　</key>
+			<real>28.51</real>
+			<key>经度</key>
+			<real>120.44</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>天 台</string>
+			<key>纬度　</key>
+			<real>29.09</real>
+			<key>经度</key>
+			<real>121.02</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>黄 岩</string>
+			<key>纬度　</key>
+			<real>28.38</real>
+			<key>经度</key>
+			<real>121.16</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>玉 环</string>
+			<key>纬度　</key>
+			<real>28.08</real>
+			<key>经度</key>
+			<real>121.14</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>丽 水</string>
+			<key>纬度　</key>
+			<real>28.27</real>
+			<key>经度</key>
+			<real>119.55</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>青 田</string>
+			<key>纬度　</key>
+			<real>28.27</real>
+			<key>经度</key>
+			<real>120.17</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>庆 无</string>
+			<key>纬度　</key>
+			<real>27.37</real>
+			<key>经度</key>
+			<real>119.04</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>遂 昌</string>
+			<key>纬度　</key>
+			<real>28.35</real>
+			<key>经度</key>
+			<real>119.15</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>缙 云</string>
+			<key>纬度　</key>
+			<real>28.4</real>
+			<key>经度</key>
+			<real>120.36</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>云 和</string>
+			<key>纬度　</key>
+			<real>28.07</real>
+			<key>经度</key>
+			<real>119.34</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>龙 泉</string>
+			<key>纬度　</key>
+			<real>28.05</real>
+			<key>经度</key>
+			<real>119.08</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>松 阳</string>
+			<key>纬度　</key>
+			<real>28.28</real>
+			<key>经度</key>
+			<real>119.29</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>金 华</string>
+			<key>纬度　</key>
+			<real>29.07</real>
+			<key>经度</key>
+			<real>119.38</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>浦 江</string>
+			<key>纬度　</key>
+			<real>29.28</real>
+			<key>经度</key>
+			<real>119.53</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>东 阳</string>
+			<key>纬度　</key>
+			<real>29.16</real>
+			<key>经度</key>
+			<real>120.14</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>武 义</string>
+			<key>纬度　</key>
+			<real>28.54</real>
+			<key>经度</key>
+			<real>119.49</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>江 山</string>
+			<key>纬度　</key>
+			<real>28.44</real>
+			<key>经度</key>
+			<real>118.37</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>开 化</string>
+			<key>纬度　</key>
+			<real>29.09</real>
+			<key>经度</key>
+			<real>118.23</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>衢 州</string>
+			<key>纬度　</key>
+			<real>28.58</real>
+			<key>经度</key>
+			<real>118.53</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>兰 溪</string>
+			<key>纬度　</key>
+			<real>29.11</real>
+			<key>经度</key>
+			<real>119.29</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>义 乌</string>
+			<key>纬度　</key>
+			<real>29.19</real>
+			<key>经度</key>
+			<real>120.04</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>永 康</string>
+			<key>纬度　</key>
+			<real>28.55</real>
+			<key>经度</key>
+			<real>120.01</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>常 山</string>
+			<key>纬度　</key>
+			<real>28.54</real>
+			<key>经度</key>
+			<real>118.3</real>
+		</dict>
+	</array>
+	<key>重庆市</key>
+	<array>
+		<dict>
+			<key>城市名</key>
+			<string>重 庆</string>
+			<key>纬度　</key>
+			<real>29.35</real>
+			<key>经度</key>
+			<real>106.32</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>綦 江</string>
+			<key>纬度　</key>
+			<real>29.25</real>
+			<key>经度</key>
+			<real>106.34</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>长 寿</string>
+			<key>纬度　</key>
+			<real>29.01</real>
+			<key>经度</key>
+			<real>106.38</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>南 桐</string>
+			<key>纬度　</key>
+			<real>29.52</real>
+			<key>经度</key>
+			<real>107.02</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>合 川</string>
+			<key>纬度　</key>
+			<real>291.6</real>
+			<key>经度</key>
+			<real>106.17</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>潼 南</string>
+			<key>纬度　</key>
+			<real>30.02</real>
+			<key>经度</key>
+			<real>106.13</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>铜 梁</string>
+			<key>纬度　</key>
+			<real>30.1</real>
+			<key>经度</key>
+			<real>105.48</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>壁 山</string>
+			<key>纬度　</key>
+			<real>29.52</real>
+			<key>经度</key>
+			<real>106.02</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>荣 昌</string>
+			<key>纬度　</key>
+			<real>29.37</real>
+			<key>经度</key>
+			<real>106.13</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>大 足</string>
+			<key>纬度　</key>
+			<real>29.24</real>
+			<key>经度</key>
+			<real>105.43</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>永 川</string>
+			<key>纬度　</key>
+			<real>29.45</real>
+			<key>经度</key>
+			<real>105.43</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>万 盛</string>
+			<key>纬度　</key>
+			<real>29.23</real>
+			<key>经度</key>
+			<real>105.55</real>
+		</dict>
+	</array>
+	<key>港澳台</key>
+	<array>
+		<dict>
+			<key>城市名</key>
+			<string>香 港</string>
+			<key>纬度　</key>
+			<real>22.12</real>
+			<key>经度</key>
+			<real>114.06</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>澳 门</string>
+			<key>纬度　</key>
+			<real>22.08</real>
+			<key>经度</key>
+			<real>113.2</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>台 北</string>
+			<key>纬度　</key>
+			<real>25.03</real>
+			<key>经度</key>
+			<real>121.3</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>高 雄	</string>
+			<key>纬度　</key>
+			<real>22.38</real>
+			<key>经度</key>
+			<real>120.22</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>基 隆</string>
+			<key>纬度　</key>
+			<real>24.08</real>
+			<key>经度</key>
+			<real>121.44</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>台 中</string>
+			<key>纬度　</key>
+			<real>24.09</real>
+			<key>经度</key>
+			<real>120.4</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>台 南</string>
+			<key>纬度　</key>
+			<real>22.59</real>
+			<key>经度</key>
+			<real>120.11</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>宜 兰</string>
+			<key>纬度　</key>
+			<real>24.45</real>
+			<key>经度</key>
+			<real>121.45</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>桃 园</string>
+			<key>纬度　</key>
+			<real>25</real>
+			<key>经度</key>
+			<real>121.18</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>新 竹</string>
+			<key>纬度　</key>
+			<real>24.49</real>
+			<key>经度</key>
+			<real>120.58</real>
+		</dict>
+	</array>
+	<key>河北省</key>
+	<array>
+		<dict>
+			<key>城市名</key>
+			<string>石家庄</string>
+			<key>纬度　</key>
+			<real>38.02</real>
+			<key>经度</key>
+			<real>114.29</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>唐 山	 </string>
+			<key>纬度　</key>
+			<real>39.08</real>
+			<key>经度</key>
+			<real>118.01</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>行 唐	 </string>
+			<key>纬度　</key>
+			<real>38.25</real>
+			<key>经度</key>
+			<real>114.32</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>灵 寿</string>
+			<key>纬度　</key>
+			<real>38.19</real>
+			<key>经度</key>
+			<real>114.23</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>束 鹿	</string>
+			<key>纬度　</key>
+			<real>37.56</real>
+			<key>经度</key>
+			<real>115.11</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>晋 县	</string>
+			<key>纬度　</key>
+			<real>38.02</real>
+			<key>经度</key>
+			<real>115.02</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>藁 城	</string>
+			<key>纬度　</key>
+			<real>38.02</real>
+			<key>经度</key>
+			<real>114.5</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>高 邑</string>
+			<key>纬度　</key>
+			<real>37.37</real>
+			<key>经度</key>
+			<real>114.35</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>赵 县	</string>
+			<key>纬度　</key>
+			<real>37.46</real>
+			<key>经度</key>
+			<real>114.47</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>井 陉</string>
+			<key>纬度　</key>
+			<real>39.02</real>
+			<key>经度</key>
+			<real>114.08</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>获 鹿</string>
+			<key>纬度　</key>
+			<real>38.05</real>
+			<key>经度</key>
+			<real>114.02</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>新 乐</string>
+			<key>纬度　</key>
+			<real>38.2</real>
+			<key>经度</key>
+			<real>114.4</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>正 定</string>
+			<key>纬度　</key>
+			<real>30.08</real>
+			<key>经度</key>
+			<real>114.34</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>深 泽</string>
+			<key>纬度　</key>
+			<real>38.12</real>
+			<key>经度</key>
+			<real>115.12</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>无 极	</string>
+			<key>纬度　</key>
+			<real>38.1</real>
+			<key>经度</key>
+			<real>114.58</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>赞 皇</string>
+			<key>纬度　</key>
+			<real>37.39</real>
+			<key>经度</key>
+			<real>114.21</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>元 氏	</string>
+			<key>纬度　</key>
+			<real>37.44</real>
+			<key>经度</key>
+			<real>114.3</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>栾 城</string>
+			<key>纬度　</key>
+			<real>38.52</real>
+			<key>经度</key>
+			<real>114.38</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>平 山</string>
+			<key>纬度　</key>
+			<real>38.12</real>
+			<key>经度</key>
+			<real>114.14</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>邯 郸</string>
+			<key>纬度　</key>
+			<real>36.36</real>
+			<key>经度</key>
+			<real>114.28</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>永 年</string>
+			<key>纬度　</key>
+			<real>36.46</real>
+			<key>经度</key>
+			<real>114.3</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>曲 周	</string>
+			<key>纬度　</key>
+			<real>36.47</real>
+			<key>经度</key>
+			<real>114.55</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>馆 陶	</string>
+			<key>纬度　</key>
+			<real>36.28</real>
+			<key>经度</key>
+			<real>115.24</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>魏 县	</string>
+			<key>纬度　</key>
+			<real>36.22</real>
+			<key>经度</key>
+			<real>114.56</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>成 安	</string>
+			<key>纬度　</key>
+			<real>36.26</real>
+			<key>经度</key>
+			<real>114.41</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>大 名	</string>
+			<key>纬度　</key>
+			<real>36.17</real>
+			<key>经度</key>
+			<real>115.08</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>涉 县</string>
+			<key>纬度　</key>
+			<real>36.34</real>
+			<key>经度</key>
+			<real>113.4</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>鸡 泽</string>
+			<key>纬度　</key>
+			<real>36.57</real>
+			<key>经度</key>
+			<real>113.51</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>丘 县</string>
+			<key>纬度　</key>
+			<real>36.5</real>
+			<key>经度</key>
+			<real>115.11</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>广 平	</string>
+			<key>纬度　</key>
+			<real>36.29</real>
+			<key>经度</key>
+			<real>114.56</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>肥 乡</string>
+			<key>纬度　</key>
+			<real>36.34</real>
+			<key>经度</key>
+			<real>114.48</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>临 漳</string>
+			<key>纬度　</key>
+			<real>36.21</real>
+			<key>经度</key>
+			<real>114.37</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>磁 县</string>
+			<key>纬度　</key>
+			<real>36.22</real>
+			<key>经度</key>
+			<real>114.22</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>武 安</string>
+			<key>纬度　</key>
+			<real>36.42</real>
+			<key>经度</key>
+			<real>114.12</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>邢 台	</string>
+			<key>纬度　</key>
+			<real>37.03</real>
+			<key>经度</key>
+			<real>114.29</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>柏 乡</string>
+			<key>纬度　</key>
+			<real>37.29</real>
+			<key>经度</key>
+			<real>114.41</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>宁 普</string>
+			<key>纬度　</key>
+			<real>37.37</real>
+			<key>经度</key>
+			<real>114.54</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>隆 尧</string>
+			<key>纬度　</key>
+			<real>37.21</real>
+			<key>经度</key>
+			<real>114.45</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>临 西</string>
+			<key>纬度　</key>
+			<real>36.52</real>
+			<key>经度</key>
+			<real>115.3</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>南 官</string>
+			<key>纬度　</key>
+			<real>37.22</real>
+			<key>经度</key>
+			<real>115.22</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>巨 鹿</string>
+			<key>纬度　</key>
+			<real>37.13</real>
+			<key>经度</key>
+			<real>115.02</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>任 县</string>
+			<key>纬度　</key>
+			<real>37.07</real>
+			<key>经度</key>
+			<real>114.41</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>沙 河</string>
+			<key>纬度　</key>
+			<real>36.56</real>
+			<key>经度</key>
+			<real>114.31</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>临 城	</string>
+			<key>纬度　</key>
+			<real>37.26</real>
+			<key>经度</key>
+			<real>114.3</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>内 丘</string>
+			<key>纬度　</key>
+			<real>37.17</real>
+			<key>经度</key>
+			<real>114.3</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>新 河</string>
+			<key>纬度　</key>
+			<real>37.32</real>
+			<key>经度</key>
+			<real>115.13</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>清 河</string>
+			<key>纬度　</key>
+			<real>37.04</real>
+			<key>经度</key>
+			<real>115.4</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>威 县</string>
+			<key>纬度　</key>
+			<real>36.58</real>
+			<key>经度</key>
+			<real>115.05</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>广 宗</string>
+			<key>纬度　</key>
+			<real>37.04</real>
+			<key>经度</key>
+			<real>115.08</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>平 乡	</string>
+			<key>纬度　</key>
+			<real>37.04</real>
+			<key>经度</key>
+			<real>115.01</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>南 和</string>
+			<key>纬度　</key>
+			<real>37</real>
+			<key>经度</key>
+			<real>114.43</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>保 定</string>
+			<key>纬度　</key>
+			<real>38.51</real>
+			<key>经度</key>
+			<real>115.29</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>涞 水</string>
+			<key>纬度　</key>
+			<real>39.23</real>
+			<key>经度</key>
+			<real>115.43</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>涿 县</string>
+			<key>纬度　</key>
+			<real>39.29</real>
+			<key>经度</key>
+			<real>115.59</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>定 兴	</string>
+			<key>纬度　</key>
+			<real>39.17</real>
+			<key>经度</key>
+			<real>115.47</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>容 城	</string>
+			<key>纬度　</key>
+			<real>39.04</real>
+			<key>经度</key>
+			<real>115.52</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>安 新	 </string>
+			<key>纬度　</key>
+			<real>38.55</real>
+			<key>经度</key>
+			<real>115.55</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>蠡 县	</string>
+			<key>纬度　</key>
+			<real>38.29</real>
+			<key>经度</key>
+			<real>115.35</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>博 野</string>
+			<key>纬度　</key>
+			<real>38.28</real>
+			<key>经度</key>
+			<real>115.28</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>定 县</string>
+			<key>纬度　</key>
+			<real>38.31</real>
+			<key>经度</key>
+			<real>114.01</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>阜 平</string>
+			<key>纬度　</key>
+			<real>38.51</real>
+			<key>经度</key>
+			<real>114.11</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>唐 县	</string>
+			<key>纬度　</key>
+			<real>38.45</real>
+			<key>经度</key>
+			<real>114.58</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>涞 源	</string>
+			<key>纬度　</key>
+			<real>39.22</real>
+			<key>经度</key>
+			<real>114.4</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>易 县</string>
+			<key>纬度　</key>
+			<real>39.21</real>
+			<key>经度</key>
+			<real>115.29</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>新 城	</string>
+			<key>纬度　</key>
+			<real>39.2</real>
+			<key>经度</key>
+			<real>115.5</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>雄 县</string>
+			<key>纬度　</key>
+			<real>38.59</real>
+			<key>经度</key>
+			<real>116.06</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>徐 水</string>
+			<key>纬度　</key>
+			<real>39.01</real>
+			<key>经度</key>
+			<real>115.39</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>高 阳	</string>
+			<key>纬度　</key>
+			<real>38.41</real>
+			<key>经度</key>
+			<real>115.47</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>安 国	</string>
+			<key>纬度　</key>
+			<real>38.25</real>
+			<key>经度</key>
+			<real>115.18</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>清 苑</string>
+			<key>纬度　</key>
+			<real>38.46</real>
+			<key>经度</key>
+			<real>115.28</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>望 都</string>
+			<key>纬度　</key>
+			<real>38.43</real>
+			<key>经度</key>
+			<real>115.08</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>曲 阳</string>
+			<key>纬度　</key>
+			<real>38.37</real>
+			<key>经度</key>
+			<real>114.41</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>完 县</string>
+			<key>纬度　</key>
+			<real>38.5</real>
+			<key>经度</key>
+			<real>115.07</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>满 城</string>
+			<key>纬度　</key>
+			<real>38.57</real>
+			<key>经度</key>
+			<real>115.27</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>张家口</string>
+			<key>纬度　</key>
+			<real>40.09</real>
+			<key>经度</key>
+			<real>114.52</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>康 保	</string>
+			<key>纬度　</key>
+			<real>41.52</real>
+			<key>经度</key>
+			<real>114.36</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>赤 城	</string>
+			<key>纬度　</key>
+			<real>40.55</real>
+			<key>经度</key>
+			<real>115.49</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>怀 来</string>
+			<key>纬度　</key>
+			<real>40.24</real>
+			<key>经度</key>
+			<real>115.32</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>蔚 县</string>
+			<key>纬度　</key>
+			<real>39.5</real>
+			<key>经度</key>
+			<real>114.32</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>宣 化</string>
+			<key>纬度　</key>
+			<real>40.38</real>
+			<key>经度</key>
+			<real>115.02</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>张 北</string>
+			<key>纬度　</key>
+			<real>41.09</real>
+			<key>经度</key>
+			<real>114.42</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>沽 源</string>
+			<key>纬度　</key>
+			<real>41.41</real>
+			<key>经度</key>
+			<real>115.41</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>崇 礼</string>
+			<key>纬度　</key>
+			<real>40.59</real>
+			<key>经度</key>
+			<real>115.15</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>涿 鹿	 </string>
+			<key>纬度　</key>
+			<real>40.22</real>
+			<key>经度</key>
+			<real>115.12</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>阳 原</string>
+			<key>纬度　</key>
+			<real>40.07</real>
+			<key>经度</key>
+			<real>114.09</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>怀 安</string>
+			<key>纬度　</key>
+			<real>40.4</real>
+			<key>经度</key>
+			<real>114.23</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>尚 义</string>
+			<key>纬度　</key>
+			<real>41.03</real>
+			<key>经度</key>
+			<real>113.57</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>万 全</string>
+			<key>纬度　</key>
+			<real>40.5</real>
+			<key>经度</key>
+			<real>114.44</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>承 德	</string>
+			<key>纬度　</key>
+			<real>40.58</real>
+			<key>经度</key>
+			<real>117.56</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>围 场</string>
+			<key>纬度　</key>
+			<real>41.57</real>
+			<key>经度</key>
+			<real>117.43</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>平 泉</string>
+			<key>纬度　</key>
+			<real>41.01</real>
+			<key>经度</key>
+			<real>118.41</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>宽 城	 </string>
+			<key>纬度　</key>
+			<real>40.37</real>
+			<key>经度</key>
+			<real>118.28</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>兴 隆</string>
+			<key>纬度　</key>
+			<real>40.25</real>
+			<key>经度</key>
+			<real>117.29</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>滦 平</string>
+			<key>纬度　</key>
+			<real>40.57</real>
+			<key>经度</key>
+			<real>117.32</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>隆 化</string>
+			<key>纬度　</key>
+			<real>41.19</real>
+			<key>经度</key>
+			<real>117.42</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>青 龙</string>
+			<key>纬度　</key>
+			<real>40.26</real>
+			<key>经度</key>
+			<real>118.56</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>丰 宁	 </string>
+			<key>纬度　</key>
+			<real>41.12</real>
+			<key>经度</key>
+			<real>116.38</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>秦皇岛</string>
+			<key>纬度　</key>
+			<real>39.57</real>
+			<key>经度</key>
+			<real>119.34</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>迁 西	 </string>
+			<key>纬度　</key>
+			<real>40.09</real>
+			<key>经度</key>
+			<real>118.18</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>迁 安</string>
+			<key>纬度　</key>
+			<real>40.01</real>
+			<key>经度</key>
+			<real>118.41</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>昌 黎</string>
+			<key>纬度　</key>
+			<real>39.43</real>
+			<key>经度</key>
+			<real>119.09</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>卢 龙</string>
+			<key>纬度　</key>
+			<real>39.53</real>
+			<key>经度</key>
+			<real>118.51</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>滦 南	</string>
+			<key>纬度　</key>
+			<real>39.29</real>
+			<key>经度</key>
+			<real>118.4</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>玉 田</string>
+			<key>纬度　</key>
+			<real>39.54</real>
+			<key>经度</key>
+			<real>117.54</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>唐 海</string>
+			<key>纬度　</key>
+			<real>39.19</real>
+			<key>经度</key>
+			<real>118.32</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>遵 化	 </string>
+			<key>纬度　</key>
+			<real>40.12</real>
+			<key>经度</key>
+			<real>117.58</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>抚 宁</string>
+			<key>纬度　</key>
+			<real>39.53</real>
+			<key>经度</key>
+			<real>118.13</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>乐 亭</string>
+			<key>纬度　</key>
+			<real>39.26</real>
+			<key>经度</key>
+			<real>118.54</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>滦 县	 </string>
+			<key>纬度　</key>
+			<real>39.44</real>
+			<key>经度</key>
+			<real>118.44</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>丰 南	</string>
+			<key>纬度　</key>
+			<real>39.35</real>
+			<key>经度</key>
+			<real>118.06</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>丰 润	 </string>
+			<key>纬度　</key>
+			<real>39.49</real>
+			<key>经度</key>
+			<real>118.08</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>廊 坊	</string>
+			<key>纬度　</key>
+			<real>39.32</real>
+			<key>经度</key>
+			<real>116.42</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>安 次	</string>
+			<key>纬度　</key>
+			<real>39.31</real>
+			<key>经度</key>
+			<real>116.41</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>三 河	</string>
+			<key>纬度　</key>
+			<real>39.58</real>
+			<key>经度</key>
+			<real>117.47</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>香 河	</string>
+			<key>纬度　</key>
+			<real>39.46</real>
+			<key>经度</key>
+			<real>117</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>霸 县	</string>
+			<key>纬度　</key>
+			<real>39.07</real>
+			<key>经度</key>
+			<real>116.23</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>固 安	</string>
+			<key>纬度　</key>
+			<real>39.26</real>
+			<key>经度</key>
+			<real>116.17</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>大 城</string>
+			<key>纬度　</key>
+			<real>38.42</real>
+			<key>经度</key>
+			<real>116.38</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>文 安</string>
+			<key>纬度　</key>
+			<real>38.52</real>
+			<key>经度</key>
+			<real>116.27</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>永 清</string>
+			<key>纬度　</key>
+			<real>39.19</real>
+			<key>经度</key>
+			<real>116.29</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>大 厂</string>
+			<key>纬度　</key>
+			<real>39.59</real>
+			<key>经度</key>
+			<real>116.59</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>沧 州	</string>
+			<key>纬度　</key>
+			<real>38.2</real>
+			<key>经度</key>
+			<real>116.5</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>黄 骅</string>
+			<key>纬度　</key>
+			<real>38.24</real>
+			<key>经度</key>
+			<real>117.2</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>盐 山</string>
+			<key>纬度　</key>
+			<real>38.04</real>
+			<key>经度</key>
+			<real>117.13</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>吴 桥	</string>
+			<key>纬度　</key>
+			<real>37.39</real>
+			<key>经度</key>
+			<real>116.22</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>东 光	</string>
+			<key>纬度　</key>
+			<real>37.53</real>
+			<key>经度</key>
+			<real>116.31</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>肃 宁</string>
+			<key>纬度　</key>
+			<real>38.26</real>
+			<key>经度</key>
+			<real>115.49</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>河 间</string>
+			<key>纬度　</key>
+			<real>38.27</real>
+			<key>经度</key>
+			<real>116.04</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>泊 头	</string>
+			<key>纬度　</key>
+			<real>38.05</real>
+			<key>经度</key>
+			<real>116.34</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>交 河	</string>
+			<key>纬度　</key>
+			<real>38.01</real>
+			<key>经度</key>
+			<real>116.16</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>青 县	</string>
+			<key>纬度　</key>
+			<real>38.35</real>
+			<key>经度</key>
+			<real>116.48</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>海 兴</string>
+			<key>纬度　</key>
+			<real>38.1</real>
+			<key>经度</key>
+			<real>117.51</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>南 皮	</string>
+			<key>纬度　</key>
+			<real>38.03</real>
+			<key>经度</key>
+			<real>116.42</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>任 丘	</string>
+			<key>纬度　</key>
+			<real>38.43</real>
+			<key>经度</key>
+			<real>116.05</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>献 县	</string>
+			<key>纬度　</key>
+			<real>38.12</real>
+			<key>经度</key>
+			<real>116.07</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>孟 村</string>
+			<key>纬度　</key>
+			<real>38.04</real>
+			<key>经度</key>
+			<real>117.06</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>衡 水</string>
+			<key>纬度　</key>
+			<real>37.43</real>
+			<key>经度</key>
+			<real>115.43</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>饶 阳	</string>
+			<key>纬度　</key>
+			<real>38.14</real>
+			<key>经度</key>
+			<real>115.44</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>阜 城</string>
+			<key>纬度　</key>
+			<real>37.52</real>
+			<key>经度</key>
+			<real>116.08</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>景 县</string>
+			<key>纬度　</key>
+			<real>37.41</real>
+			<key>经度</key>
+			<real>116.16</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>枣 强</string>
+			<key>纬度　</key>
+			<real>37.31</real>
+			<key>经度</key>
+			<real>115.43</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>深 县	</string>
+			<key>纬度　</key>
+			<real>38.01</real>
+			<key>经度</key>
+			<real>115.23</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>安 平	</string>
+			<key>纬度　</key>
+			<real>38.13</real>
+			<key>经度</key>
+			<real>115.3</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>武 强	</string>
+			<key>纬度　</key>
+			<real>38.02</real>
+			<key>经度</key>
+			<real>115.58</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>武 邑	</string>
+			<key>纬度　</key>
+			<real>37.49</real>
+			<key>经度</key>
+			<real>115.54</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>故 城</string>
+			<key>纬度　</key>
+			<real>37.22</real>
+			<key>经度</key>
+			<real>115.58</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>冀 县	</string>
+			<key>纬度　</key>
+			<real>37.35</real>
+			<key>经度</key>
+			<real>115.34</real>
+		</dict>
+	</array>
+	<key>内蒙古自治区</key>
+	<array>
+		<dict>
+			<key>城市名</key>
+			<string>呼和浩特 </string>
+			<key>纬度　</key>
+			<real>40.49</real>
+			<key>经度</key>
+			<real>111.39</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>上默特左旗	 </string>
+			<key>纬度　</key>
+			<real>40.43</real>
+			<key>经度</key>
+			<real>111.08</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>托克托</string>
+			<key>纬度　</key>
+			<real>40.17</real>
+			<key>经度</key>
+			<real>111.09</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>包 头</string>
+			<key>纬度　</key>
+			<real>40.35</real>
+			<key>经度</key>
+			<real>110</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>上默特右旗</string>
+			<key>纬度　</key>
+			<real>40.33</real>
+			<key>经度</key>
+			<real>110.31</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>固 阳	</string>
+			<key>纬度　</key>
+			<real>41.02</real>
+			<key>经度</key>
+			<real>110.02</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>乌 海</string>
+			<key>纬度　</key>
+			<real>39.4</real>
+			<key>经度</key>
+			<real>106.49</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>集 宁</string>
+			<key>纬度　</key>
+			<real>41.02</real>
+			<key>经度</key>
+			<real>113.05</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>兴 和	</string>
+			<key>纬度　</key>
+			<real>40.53</real>
+			<key>经度</key>
+			<real>113.58</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>清水河</string>
+			<key>纬度　</key>
+			<real>39.55</real>
+			<key>经度</key>
+			<real>111.39</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>武 川</string>
+			<key>纬度　</key>
+			<real>41.07</real>
+			<key>经度</key>
+			<real>111.25</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>卓 资</string>
+			<key>纬度　</key>
+			<real>40.56</real>
+			<key>经度</key>
+			<real>112.31</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>商 都	</string>
+			<key>纬度　</key>
+			<real>41.35</real>
+			<key>经度</key>
+			<real>113.32</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>丰 镇</string>
+			<key>纬度　</key>
+			<real>40.27</real>
+			<key>经度</key>
+			<real>113.09</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>凉 城	</string>
+			<key>纬度　</key>
+			<real>40.31</real>
+			<key>经度</key>
+			<real>112.29</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>和林格尔</string>
+			<key>纬度　</key>
+			<real>40.24</real>
+			<key>经度</key>
+			<real>111.48</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>化 德</string>
+			<key>纬度　</key>
+			<real>41.54</real>
+			<key>经度</key>
+			<integer>114</integer>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>察哈尔右翼后旗</string>
+			<key>纬度　</key>
+			<real>41.51</real>
+			<key>经度</key>
+			<real>113.09</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>察哈尔右翼中旗</string>
+			<key>纬度　</key>
+			<real>41.17</real>
+			<key>经度</key>
+			<real>112.37</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>察哈尔右翼前旗	</string>
+			<key>纬度　</key>
+			<real>40.47</real>
+			<key>经度</key>
+			<real>113.11</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>四子王旗</string>
+			<key>纬度　</key>
+			<real>41.22</real>
+			<key>经度</key>
+			<real>111.41</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>达尔罕茂明安联合旗</string>
+			<key>纬度　</key>
+			<real>41.43</real>
+			<key>经度</key>
+			<real>110.25</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>二连浩特</string>
+			<key>纬度　</key>
+			<real>43.39</real>
+			<key>经度</key>
+			<real>111.58</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>阿巴哈纳尔旗</string>
+			<key>纬度　</key>
+			<real>43.57</real>
+			<key>经度</key>
+			<real>116.05</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>多 伦	</string>
+			<key>纬度　</key>
+			<real>42.11</real>
+			<key>经度</key>
+			<real>116.29</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>阿巴嘎旗</string>
+			<key>纬度　</key>
+			<real>44.02</real>
+			<key>经度</key>
+			<real>114.58</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>西乌珠穆沁旗</string>
+			<key>纬度　</key>
+			<real>44.36</real>
+			<key>经度</key>
+			<real>117.35</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>东乌珠穆沁旗</string>
+			<key>纬度　</key>
+			<real>45.32</real>
+			<key>经度</key>
+			<real>116.58</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>苏尼特左旗	</string>
+			<key>纬度　</key>
+			<real>43.51</real>
+			<key>经度</key>
+			<real>113.42</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>苏尼特右旗	</string>
+			<key>纬度　</key>
+			<real>42.28</real>
+			<key>经度</key>
+			<real>112.57</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>太仆寺旗</string>
+			<key>纬度　</key>
+			<real>41.54</real>
+			<key>经度</key>
+			<real>115.18</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>正镶白旗</string>
+			<key>纬度　</key>
+			<real>42.19</real>
+			<key>经度</key>
+			<real>115</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>正蓝旗</string>
+			<key>纬度　</key>
+			<real>42.15</real>
+			<key>经度</key>
+			<real>116.01</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>镶黄旗</string>
+			<key>纬度　</key>
+			<real>42.15</real>
+			<key>经度</key>
+			<real>113.5</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>海拉尔</string>
+			<key>纬度　</key>
+			<real>29.13</real>
+			<key>经度</key>
+			<real>119.44</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>满洲里</string>
+			<key>纬度　</key>
+			<real>49.35</real>
+			<key>经度</key>
+			<real>117.28</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>陈巴尔虎旗</string>
+			<key>纬度　</key>
+			<real>49.2</real>
+			<key>经度</key>
+			<real>119.27</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>额尔古纳右旗</string>
+			<key>纬度　</key>
+			<real>50.27</real>
+			<key>经度</key>
+			<real>120.05</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>额尔古纳左旗</string>
+			<key>纬度　</key>
+			<real>50.48</real>
+			<key>经度</key>
+			<real>121.31</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>喜桂图旗</string>
+			<key>纬度　</key>
+			<real>49.18</real>
+			<key>经度</key>
+			<real>120.44</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>阿荣旗</string>
+			<key>纬度　</key>
+			<real>48.08</real>
+			<key>经度</key>
+			<real>123.3</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>布特哈旗</string>
+			<key>纬度　</key>
+			<real>47.59</real>
+			<key>经度</key>
+			<real>122.47</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>新巴尔虎左旗</string>
+			<key>纬度　</key>
+			<real>48.4</real>
+			<key>经度</key>
+			<real>116.49</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>新巴尔虎右旗</string>
+			<key>纬度　</key>
+			<real>48.13</real>
+			<key>经度</key>
+			<real>118.14</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>鄂伦春自治旗</string>
+			<key>纬度　</key>
+			<real>50.35</real>
+			<key>经度</key>
+			<real>123.42</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>莫力达瓦达斡尔族自治旗</string>
+			<key>纬度　</key>
+			<real>48.28</real>
+			<key>经度</key>
+			<real>124.3</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>鄂温克族自治旗</string>
+			<key>纬度　</key>
+			<real>49.08</real>
+			<key>经度</key>
+			<real>119.45</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>通 辽	</string>
+			<key>纬度　</key>
+			<real>43.38</real>
+			<key>经度</key>
+			<real>122.17</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>开 鲁</string>
+			<key>纬度　</key>
+			<real>43.37</real>
+			<key>经度</key>
+			<real>121.19</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>科尔沁左翼后旗</string>
+			<key>纬度　</key>
+			<real>42.58</real>
+			<key>经度</key>
+			<real>122.21</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>科尔沁左翼中旗</string>
+			<key>纬度　</key>
+			<real>44.08</real>
+			<key>经度</key>
+			<real>123.17</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>库伦旗</string>
+			<key>纬度　</key>
+			<real>42.43</real>
+			<key>经度</key>
+			<real>121.45</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>奈曼旗</string>
+			<key>纬度　</key>
+			<real>42.51</real>
+			<key>经度</key>
+			<real>120.39</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>扎鲁特旗</string>
+			<key>纬度　</key>
+			<real>44.33</real>
+			<key>经度</key>
+			<real>120.52</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>赤 峰</string>
+			<key>纬度　</key>
+			<real>4.17</real>
+			<key>经度</key>
+			<real>118.52</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>宁 城	</string>
+			<key>纬度　</key>
+			<real>41.37</real>
+			<key>经度</key>
+			<real>119.19</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>林 西</string>
+			<key>纬度　</key>
+			<real>43.37</real>
+			<key>经度</key>
+			<real>118.01</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>喀喇沁旗</string>
+			<key>纬度　</key>
+			<real>41.57</real>
+			<key>经度</key>
+			<real>118.4</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>敖汉旗</string>
+			<key>纬度　</key>
+			<real>42.18</real>
+			<key>经度</key>
+			<real>119.52</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>翁牛特旗</string>
+			<key>纬度　</key>
+			<real>42.58</real>
+			<key>经度</key>
+			<real>119</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>巴林右旗</string>
+			<key>纬度　</key>
+			<real>43.31</real>
+			<key>经度</key>
+			<real>118.39</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>巴林左旗</string>
+			<key>纬度　</key>
+			<real>43.59</real>
+			<key>经度</key>
+			<real>119.21</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>阿鲁科尔沁旗</string>
+			<key>纬度　</key>
+			<real>43.58</real>
+			<key>经度</key>
+			<real>120.03</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>克什克腾旗	 </string>
+			<key>纬度　</key>
+			<real>43.17</real>
+			<key>经度</key>
+			<real>117.29</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>伊克昭盟</string>
+			<key>纬度　</key>
+			<real>39.5</real>
+			<key>经度</key>
+			<real>110</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>东胜县</string>
+			<key>纬度　</key>
+			<real>39.5</real>
+			<key>经度</key>
+			<real>110</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>准格尔旗</string>
+			<key>纬度　</key>
+			<real>39.41</real>
+			<key>经度</key>
+			<real>111.08</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>乌审旗</string>
+			<key>纬度　</key>
+			<real>38.23</real>
+			<key>经度</key>
+			<real>109.02</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>伊金霍洛旗	</string>
+			<key>纬度　</key>
+			<real>39.15</real>
+			<key>经度</key>
+			<real>109.46</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>鄂托克旗</string>
+			<key>纬度　</key>
+			<real>39.07</real>
+			<key>经度</key>
+			<real>107.58</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>鄂托克前旗	</string>
+			<key>纬度　</key>
+			<real>38.11</real>
+			<key>经度</key>
+			<real>107.26</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>杭锦旗</string>
+			<key>纬度　</key>
+			<real>39.5</real>
+			<key>经度</key>
+			<real>108.42</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>达拉特旗</string>
+			<key>纬度　</key>
+			<real>40.25</real>
+			<key>经度</key>
+			<real>110.01</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>临 河</string>
+			<key>纬度　</key>
+			<real>40.47</real>
+			<key>经度</key>
+			<real>107.22</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>五 原	</string>
+			<key>纬度　</key>
+			<real>41.07</real>
+			<key>经度</key>
+			<real>108.17</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>磴 口	</string>
+			<key>纬度　</key>
+			<real>40.2</real>
+			<key>经度</key>
+			<real>106.59</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>杭锦后旗</string>
+			<key>纬度　</key>
+			<real>40.53</real>
+			<key>经度</key>
+			<real>107.07</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>乌拉特中旗	</string>
+			<key>纬度　</key>
+			<real>41.33</real>
+			<key>经度</key>
+			<real>108.31</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>乌拉特前旗	</string>
+			<key>纬度　</key>
+			<real>40.45</real>
+			<key>经度</key>
+			<real>108.39</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>乌拉特后旗</string>
+			<key>纬度　</key>
+			<real>40.53</real>
+			<key>经度</key>
+			<real>108.31</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>阿拉善左旗</string>
+			<key>纬度　</key>
+			<real>38.51</real>
+			<key>经度</key>
+			<real>105.41</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>阿拉善右旗</string>
+			<key>纬度　</key>
+			<real>39.12</real>
+			<key>经度</key>
+			<real>101.41</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>额济纳旗</string>
+			<key>纬度　</key>
+			<real>41.54</real>
+			<key>经度</key>
+			<real>100.53</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>乌兰浩特</string>
+			<key>纬度　</key>
+			<real>46.04</real>
+			<key>经度</key>
+			<real>122.05</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>突 泉</string>
+			<key>纬度　</key>
+			<real>45.24</real>
+			<key>经度</key>
+			<real>121.3</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>科尔沁右翼前旗</string>
+			<key>纬度　</key>
+			<real>46.07</real>
+			<key>经度</key>
+			<real>122.02</real>
+		</dict>
+		<dict>
+			<key>城市名</key>
+			<string>科尔沁右翼中旗</string>
+			<key>纬度　</key>
+			<real>45.03</real>
+			<key>经度</key>
+			<real>121.28</real>
+		</dict>
+	</array>
+</dict>
+</plist>

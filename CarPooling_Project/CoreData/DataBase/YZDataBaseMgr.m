@@ -21,50 +21,171 @@
     return modelURL;
 }
 
-#pragma mark -personalData
-
-- (NSArray*)allObjectsSortByAttribute:(NSString*)attribute
+- (BOOL)save
 {
-    NSSortDescriptor *sortDescriptor = nil;
+    NSError *error = nil;
+    if (![self.managedObjectContext save:&error] || error)
+    {
+        DEBUG_METHOD(@"错误：%@",[error localizedDescription]);
+        return NO;
+    }
+    return YES;
+}
+
+
+- (NSManagedObject*)fetchObjectInTable:(NSString*)tableName
+{
+    NSEntityDescription *entity = [NSEntityDescription entityForName:tableName
+                                              inManagedObjectContext:self.managedObjectContext];
     
-    if ([attribute length]) sortDescriptor = [[NSSortDescriptor alloc] initWithKey:attribute ascending:YES];
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    [fetchRequest setEntity:entity];
+    NSError *error = nil;
+    NSArray *fetchedObjects = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    if (fetchedObjects && fetchedObjects.count > 0)
+    {
+        return (NSManagedObject*)[fetchedObjects firstObject];
+    }
     
-    return [self allObjectsFromTable:NSStringFromClass([PersonalData class]) sortDescriptor:sortDescriptor];
+    return nil;
 }
 
-- (NSArray*)allObjectsSortByPredicate:(NSPredicate*)predicate
+
+- (NSManagedObject*)fetchPersonalData
 {
-    return [self allObjectsFromTable:NSStringFromClass([PersonalData class]) wherePredicate:predicate];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"PersonalData"
+                                              inManagedObjectContext:self.managedObjectContext];
+    
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    [fetchRequest setEntity:entity];
+    NSError *error = nil;
+    NSArray *fetchedObjects = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+
+    if (fetchedObjects && fetchedObjects.count > 0)
+    {
+        return (NSManagedObject*)[fetchedObjects firstObject];
+    }
+    
+    return nil;
 }
 
-- (PersonalData*)personalDataSortByAccountID:(NSString*)accountID
+- (void)insertOrUpdatePersonalData:(NSDictionary*)attribute
+                                   complete:(void(^)(NSManagedObject *object,BOOL ret))result
 {
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"accountID == %@",accountID];
-    return (PersonalData*)[self firstObjectFromTable:NSStringFromClass([PersonalData class]) wherePredicate:predicate];
+    if (attribute == nil)
+    {
+        result(nil,NO);
+    }
+    
+    NSManagedObject *object = [self fetchObjectInTable:NSStringFromClass([PersonalData class])];
+    if (object == nil)
+    {
+        object = [NSEntityDescription insertNewObjectForEntityForName:@"PersonalData"
+                                               inManagedObjectContext:self.managedObjectContext];
+    }
+    
+    if (object)
+    {
+        NSArray *allKeys = [attribute allKeys];
+        
+        for (NSString *aKey in allKeys)
+        {
+            id value = [attribute objectForKey:aKey];
+            [object setValue:value forKey:aKey];
+        }
+    }
+    
+    if ( [self save])
+    {
+        result(object,YES);
+    }
+    else
+    {
+        result(nil,NO);
+    }
 }
 
-- (PersonalData*)insertOrUpdatePersonalData:(NSDictionary*)attribute
+- (NSManagedObject*)newObjectInTable:(NSString*)tableName
 {
-    return (PersonalData*)[self insertRecordInTable:NSStringFromClass([PersonalData class])
-                                      withAttribute:attribute
-                                   updateOnExistKey:@"accountID"
-                                             equals:[attribute objectForKey:@"accountID"]];
+    NSManagedObject *object = [NSEntityDescription insertNewObjectForEntityForName:tableName
+                                                            inManagedObjectContext:self.managedObjectContext];
+    return object;
 }
 
-// totalScore
+#pragma mark -路线临时存储
+
+- (void)insertOrUpdateCtRoute:(NSDictionary*)attribute
+                     complete:(void(^)(NSManagedObject *object,BOOL ret))result
+{
+    if (attribute == nil)
+    {
+        result(nil, NO);
+    }
+    NSManagedObject *object = [self fetchObjectInTable:NSStringFromClass([CreateRouteEntity class])];
+    if (object == nil)
+    {
+        object = [self newObjectInTable:NSStringFromClass([CreateRouteEntity class])];
+    }
+    
+    if (object)
+    {
+        for (NSString *aKey in [attribute allKeys])
+        {
+            id value = [attribute objectForKey:aKey];
+            if ([value isKindOfClass:[NSArray class]])
+            {
+                
+            }
+            else
+            {
+                [object setValue:value forKey:aKey];
+            }
+        }
+    }
+
+    
+}
+
+#pragma mark -TotalPointsEntity
 
 - (TotalPointsEntity*)fetchTotalScore
 {
-    NSString *mobileNo = [[YZKeyChainManager defaultManager]keychainValueForKey:KMobileNO];
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"accountID == %@",mobileNo];
-    return (TotalPointsEntity*)[self firstObjectFromTable:NSStringFromClass([TotalPointsEntity class]) wherePredicate:predicate];
+    return (TotalPointsEntity*)[self firstObjectFromTable:NSStringFromClass([TotalPointsEntity class]) wherePredicate:nil];
 }
 
-- (TotalPointsEntity*)insertOrUpdateTotalScore:(NSDictionary*)attribute
+- (void)insertOrUpdateTotalScore:(NSDictionary*)attribute
+                        complete:(void(^)(TotalPointsEntity *object,BOOL ret))result;
 {
-    return (TotalPointsEntity*)[self insertRecordInTable:NSStringFromClass([TotalPointsEntity class])
-                                      withAttribute:attribute
-                                   updateOnExistKey:@"accountID"
-                                             equals:[attribute objectForKey:@"accountID"]];
+    if (attribute == nil)
+    {
+        result(nil,NO);
+    }
+    NSManagedObject *object = [self fetchObjectInTable:NSStringFromClass([TotalPointsEntity class])];
+    if (object == nil)
+    {
+        object = [NSEntityDescription insertNewObjectForEntityForName:@"TotalPointsEntity"
+                                               inManagedObjectContext:self.managedObjectContext];
+    }
+    
+    if (object)
+    {
+        NSArray *allKeys = [attribute allKeys];
+        
+        for (NSString *aKey in allKeys)
+        {
+            id value = [attribute objectForKey:aKey];
+            [object setValue:value forKey:aKey];
+        }
+    }
+    
+    if ([self save])
+    {
+       result((TotalPointsEntity*)object,YES);
+    }
+    else
+    {
+        result(nil,NO);
+    }
+
 }
 @end

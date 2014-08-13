@@ -451,8 +451,7 @@ typedef void (^TouchBlock)();
 
 - (void)updateContentView
 {
-    NSString *mobileNo = [[YZKeyChainManager defaultManager]keychainValueForKey:KMobileNO];
-    PersonalData *personalData =  [[YZDataBaseMgr sharedManager]personalDataSortByAccountID:mobileNo];
+    PersonalData *personalData =  (PersonalData*)[[YZDataBaseMgr sharedManager]fetchPersonalData];
     _checkRadioView.gender = [personalData.gender boolValue];
     _userNamecellView.textField.text = personalData.realname;
     _userNickNameCellView.textField.text = personalData.nickname;

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5064" systemVersion="13D65" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5064" systemVersion="13E28" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="ContactsEntity" representedClassName="ContactsEntity" syncable="YES">
-        <attribute name="accountID" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="headPhoto" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="isAuthedCar" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="isAuthedDriver" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="isAuthedHead" optional="YES" attributeType="Boolean" syncable="YES"/>
@@ -10,26 +10,47 @@
         <attribute name="isDriver" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="mobile" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="userID" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="CreateNodesEntity" representedClassName="CreateNodesEntity" syncable="YES">
+        <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="route" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CreateRouteEntity" inverseName="nodes" inverseEntity="CreateRouteEntity" syncable="YES"/>
+    </entity>
+    <entity name="CreateRouteEntity" representedClassName="CreateRouteEntity" syncable="YES">
+        <attribute name="backTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="leaveDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="leaveTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="note" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="personType" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="repeat" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="routeType" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="seat" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="nodes" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="CreateNodesEntity" inverseName="route" inverseEntity="CreateNodesEntity" syncable="YES"/>
     </entity>
     <entity name="MsgEntity" representedClassName="MsgEntity" syncable="YES">
-        <attribute name="accountID" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="descriptions" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="isDriver" optional="YES" attributeType="Boolean" syncable="YES"/>
-        <attribute name="isVerifiedDriver" optional="YES" attributeType="Boolean" syncable="YES"/>
-        <attribute name="isVerifiedPassenger" optional="YES" attributeType="Boolean" syncable="YES"/>
-        <attribute name="mobile" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="msgDate" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="msgID" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="orderId" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="photo" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="type" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="userID" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="msgSender" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="MsgSenderEntity" inverseName="msg" inverseEntity="MsgSenderEntity" syncable="YES"/>
+    </entity>
+    <entity name="MsgSenderEntity" representedClassName="MsgSenderEntity" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isDriver" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="isVerifiedDriver" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="isVerifiedPassenger" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="mobile" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="photo" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="msg" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MsgEntity" inverseName="msgSender" inverseEntity="MsgEntity" syncable="YES"/>
     </entity>
     <entity name="PersonalData" representedClassName="PersonalData" syncable="YES">
-        <attribute name="accountID" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="backPhoto" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="birthday" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="carColor" optional="YES" attributeType="String" syncable="YES"/>
@@ -51,7 +72,7 @@
         <attribute name="realname" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
-    <entity name="ProductsEntity" syncable="YES">
+    <entity name="ProductsEntity" representedClassName="ProductsEntity" syncable="YES">
         <attribute name="descriptions" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
@@ -66,15 +87,17 @@
         <attribute name="type" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
     </entity>
     <entity name="TotalPointsEntity" representedClassName="TotalPointsEntity" syncable="YES">
-        <attribute name="accountID" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="score" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
     </entity>
     <elements>
-        <element name="ContactsEntity" positionX="-18" positionY="171" width="128" height="193"/>
-        <element name="MsgEntity" positionX="0" positionY="189" width="128" height="253"/>
-        <element name="PersonalData" positionX="-63" positionY="9" width="128" height="360"/>
-        <element name="ScoreRecordsEntity" positionX="-36" positionY="153" width="128" height="118"/>
-        <element name="TotalPointsEntity" positionX="-54" positionY="144" width="128" height="75"/>
+        <element name="ContactsEntity" positionX="-18" positionY="171" width="128" height="180"/>
+        <element name="MsgEntity" positionX="0" positionY="189" width="128" height="163"/>
+        <element name="MsgSenderEntity" positionX="-27" positionY="162" width="128" height="163"/>
+        <element name="PersonalData" positionX="-63" positionY="9" width="128" height="343"/>
         <element name="ProductsEntity" positionX="-27" positionY="162" width="128" height="120"/>
+        <element name="ScoreRecordsEntity" positionX="-36" positionY="153" width="128" height="118"/>
+        <element name="TotalPointsEntity" positionX="-54" positionY="144" width="128" height="58"/>
+        <element name="CreateRouteEntity" positionX="-27" positionY="162" width="128" height="178"/>
+        <element name="CreateNodesEntity" positionX="-18" positionY="171" width="128" height="133"/>
     </elements>
 </model>

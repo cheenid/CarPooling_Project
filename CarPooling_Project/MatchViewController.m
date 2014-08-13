@@ -96,6 +96,7 @@
 - (void)clickToSwitchRoute
 {
     SwitchRouteViewController *switchRouteVC = [[SwitchRouteViewController alloc]init];
+    switchRouteVC.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:switchRouteVC animated:YES];
     switchRouteVC = nil;
 }

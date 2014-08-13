@@ -2,28 +2,23 @@
 //  MsgEntity.m
 //  CarPooling_Project
 //
-//  Created by 马远征 on 14-6-18.
+//  Created by 马远征 on 14-7-2.
 //  Copyright (c) 2014年 马远征. All rights reserved.
 //
 
 #import "MsgEntity.h"
+#import "MsgSenderEntity.h"
 
 
 @implementation MsgEntity
 
-@dynamic accountID;
 @dynamic descriptions;
-@dynamic isDriver;
-@dynamic isVerifiedDriver;
-@dynamic isVerifiedPassenger;
-@dynamic mobile;
+@dynamic id;
 @dynamic msgDate;
-@dynamic msgID;
-@dynamic name;
 @dynamic orderId;
 @dynamic photo;
 @dynamic title;
 @dynamic type;
-@dynamic userID;
+@dynamic msgSender;
 
 @end
